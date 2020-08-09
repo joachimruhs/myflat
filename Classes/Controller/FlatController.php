@@ -33,14 +33,12 @@ namespace WSR\Myflat\Controller;
 class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	 public function initializeObject1() {
-//		$this->_GP = $this->request->getArguments();
       	$configuration = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
 		$this->conf['storagePid'] = $configuration['persistence']['storagePid'];
 
 //$querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
 //$querySettings->setRespectStoragePage(FALSE);
 // $querySettings->setStoragePageIds(array(1, 26, 989));
-
      }
 
 	/**
