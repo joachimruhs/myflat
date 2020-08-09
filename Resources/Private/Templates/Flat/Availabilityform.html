@@ -1,0 +1,91 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<h1> Availabilty Check</h1>
+
+<f:flashMessages />
+
+<div class="availabilityForm">
+
+	<f:form action="availabilitycheck" pageUid="{settings.resultPageId}" controller="Flat" pluginName="availabilityCheck">
+		<div>
+			Für max.
+			<select name="tx_myflat_availabilitycheck[capacity]">
+				<option value="2">2 Personen</option>
+				<option value="3">3 Personen</option>
+				<option value="4">4 Personen</option>
+				<option value="5">5 Personen</option>
+				<option value="8">8 Personen</option>
+			</select>
+		</div>
+		
+		<f:translate key="arrival" />: <input type="text" name="tx_myflat_availabilitycheck[arrival]" id="arrival" value="{_GP.arrival}" />
+		<f:translate key="departure" />: <input type="text" name="tx_myflat_availabilitycheck[departure]" id="departure" value="{_GP.departure}" />
+		
+		
+		<input type="submit" value="Check">
+	</f:form>
+
+</div>
+
+
+<link href="/typo3conf/ext/myflat/Resources/Public/JavaScript/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
+<link href="/typo3conf/ext/myflat/Resources/Public/JavaScript/jquery-ui-1.8.24.custom.css" rel="stylesheet" type="text/css"/>
+<script src="/typo3conf/ext/myflat/Resources/Public/JavaScript/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+ 	$("#arrival").datepicker({
+		hide: 1,
+		altField: "#actualDate",
+		altFormat: "dd.mm.yy" ,
+		dateFormat: "dd.mm.yy",
+		firstDay: 1,
+		minDate: " ",
+		showButtonPanel: false, //true,
+		closeText: "Kalender schlie�en",
+		currentText: "Heute",
+		dayNames: <f:format.raw><f:translate key="dayNames"/></f:format.raw>,
+		dayNamesMin: <f:format.raw><f:translate key="dayNamesMin" /></f:format.raw>,
+		monthNames:<f:format.raw><f:translate key="monthNames"/></f:format.raw>,
+		showAnim: "slideDown"
+	});
+	$("#datepicker").hide();
+	$("#actualDate").mousedown(function() {
+		$j("#datepicker").fadeIn();
+	});
+	$("#datepicker").mousedown(function() {
+	$("#datepicker").fadeOut();
+	});
+
+	$("#departure").datepicker({
+		hide: 1,
+		altField: "#actualDate",
+		altFormat: "dd.mm.yy" ,
+		dateFormat: "dd.mm.yy",
+		firstDay: 1,
+		minDate: " ",
+		showButtonPanel: false, //true,
+		closeText: "Kalender schlie�en",
+		currentText: "Heute",
+		dayNames: <f:format.raw><f:translate key="dayNames" /></f:format.raw>,
+		dayNamesMin: <f:format.raw><f:translate key="dayNamesMin" /></f:format.raw>,
+		monthNames:<f:format.raw><f:translate key="monthNames" /></f:format.raw>,
+		showAnim: "slideDown"
+	});
+	$("#datepicker").hide();
+	$("#actualDate").mousedown(function() {
+		$j("#datepicker").fadeIn();
+	});
+	$("#datepicker").mousedown(function() {
+	$("#datepicker").fadeOut();
+	});
+
+
+});
+
+</script>
+
+</f:section>

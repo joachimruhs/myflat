@@ -1,0 +1,142 @@
+﻿
+.tx-myflat .searchResult {
+
+}
+
+
+
+.tx-myflat #flashMessages, .tx-myflat .typo3-messages {
+	font-size: 1.1em;
+	display: none;
+	/*
+	position: absolute;
+	*/
+	z-index: 1000;
+}
+
+.tx-myflat .typo3-message, .tx-myflat .typo3-messages, .tx-myflat .alert  {
+	padding: 10px;
+	color: white;
+	border-radius: 10px;
+}
+.tx-myflat .message-error, .tx-myflat .alert {
+	background-color: #000;
+}
+.tx-myflat .message-warning {
+	background-color: #080;
+}
+.tx-myflat .message-information, .tx-myflat .alert-info  {
+	background-color: #33b;
+}
+
+.tx-myflat #flashMessages ul {
+	list-style: none;
+}
+
+.tx-myflat ul.typo3-messages {
+	list-style: none;
+}
+.tx-myflat ul.typo3-flashMessages {
+	padding: 0;
+}
+
+
+
+.tx-myflat .ajaxMessage {
+	padding: 10px;
+	color: white;
+	background-color: #080;
+	border-radius: 10px;
+	display: none;
+}
+
+.tx-myflat  .clearer {
+	clear: both;
+}
+
+.tx-myflat table {
+	border-spacing: 2px;
+}
+
+.tx-myflat table.monthMultiRow {
+	border: 1px solid black;
+	float: left;
+	display: block;
+	min-height: 205px;
+	background-color: #d0d0d0;
+}
+
+.tx-myflat table.monthMultiRow td {
+	font-size: 12px;
+}
+
+.tx-myflat table.monthMultiRow .monthNameMultiRow {
+	font-weight: bold;
+}
+
+
+
+.tx-myflat .tableMultiRow td.vacantWeekend {
+	text-align: center;
+	border: 1px solid black;
+	background-color: #8080ff;
+}
+
+
+.tx-myflat .tableMultiRow td.vacantDay,
+.tx-myflat .tableMultiRow td.bookedDay,
+.tx-myflat .tableMultiRow td.bookingEnd,
+.tx-myflat .tableMultiRow td.bookingStartAndEnd,
+.tx-myflat .tableMultiRow td.bookedWeekend {
+	text-align: center;
+	border: 1px solid black;
+	background-color: #fff;
+	width: 12px;
+	height: 12px;
+}
+	
+.tx-myflat .tableMultiRow td.bookedDay,
+.tx-myflat .tableMultiRow td.bookedWeekend {
+	background-color: #e00000;
+}
+.tx-myflat .tableMultiRow td.bookingStart,
+.tx-myflat .tableMultiRow td.bookingEnd {
+	background-color: #00e000;
+}
+
+.tx-myflat .tableMultiRow td.bookingStart {
+	background-color: #fff;
+	background-image:url("/typo3conf/ext/myflat/Resources/Public/Icons/bookingStartRed.gif");
+}	
+.tx-myflat .tableMultiRow td.bookingEnd {
+	background-color: #fff;
+	background-image:url("/typo3conf/ext/myflat/Resources/Public/Icons/bookingEndRed.gif");
+}	
+.tx-myflat .tableMultiRow td.bookingStartAndEnd {
+	background-color: #fff;
+	background-image:url("/typo3conf/ext/myflat/Resources/Public/Icons/bookerChangedDayRed.gif");
+}	
+
+
+
+.tx-myflat .flatName {
+	font-size: 1.3em;
+}
+.tx-myflat .flatImages li {
+	float: left;
+	list-style: none;
+}
+.tx-myflat .theMultiRowCalendar {
+	margin-top: 10px;
+}
+
+.tx-myflat .theMultiRowCalendar .calendarYear {
+	font-size: 1.7em;
+}
+
+
+
+.tx-myflat .flatTitle {
+	font-size: 18px;
+	font-weight: bold;
+}

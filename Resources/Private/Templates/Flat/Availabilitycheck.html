@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:my="http://typo3.org/ns/WSR/Myflat/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:flashMessages as="flashMessages">
+    <ul class="typo3-flashMessages">
+        <f:for each="{flashMessages}" as="flashMessage">
+            <li class="alert {flashMessage.class}">
+                <div><strong>{flashMessage.title}</strong></div>
+				
+                {flashMessage.message}
+            </li>
+        </f:for>
+    </ul>
+</f:flashMessages>
+
+
+
+<f:if condition="{arrival}">
+	<f:if condition="{flats}">
+		<f:then>
+			<h1> Availabilty Check Result</h1>
+			Verfügbarkeit vom {arrival} bis {departure}
+			<br />
+		</f:then>
+		<f:else>
+			<div><h3><f:translate key="noAvailableFlats" /></h3></div>		
+		</f:else>
+	</f:if>
+</f:if>
+
+
+<table>
+<f:for each="{flats}" as="flat">
+	<tr>
+		<td><f:link.action action="multirowcalendar" arguments="{flatUid : flat.uid, year: year}"><span class="flatTitle">{flat.name}</span></td><td> {flat.capacity} Personen</f:link.action></td>
+	</tr>
+</f:for>
+</table>
+
+</f:section>
+
+</html>

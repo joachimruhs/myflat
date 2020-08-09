@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="zipcode.description">
+				<source>zipcode</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="country.description">
+				<source>country</source>
+			</trans-unit>
+			<trans-unit id="capacity.description">
+				<source>capacity</source>
+			</trans-unit>
+			<trans-unit id="lat.description">
+				<source>lat</source>
+			</trans-unit>
+			<trans-unit id="lon.description">
+				<source>lon</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="images.description">
+				<source>images</source>
+			</trans-unit>
+			<trans-unit id="category.description">
+				<source>category</source>
+			</trans-unit>
+			<trans-unit id="attribute.description">
+				<source>attribute</source>
+			</trans-unit>
+			<trans-unit id="book.description">
+				<source>book</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

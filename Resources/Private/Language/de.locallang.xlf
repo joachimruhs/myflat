@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat">
+		<header/>
+		<body>
+			<trans-unit id="flat">
+				<target>Ferienwohnung</target>
+			</trans-unit>
+			<trans-unit id="name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="address">
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="zipcode">
+				<target>Postleitzahl</target>
+			</trans-unit>
+			<trans-unit id="city">
+				<target>Stadt</target>
+			</trans-unit>
+			<trans-unit id="country">
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="capacity">
+				<target>Kapazität</target>
+			</trans-unit>
+			<trans-unit id="lat">
+				<target>Breitengrad</target>
+			</trans-unit>
+			<trans-unit id="lon">
+				<target>Längengrad</target>
+			</trans-unit>
+			<trans-unit id="description">
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="images">
+				<target>Bilder</target>
+			</trans-unit>
+			<trans-unit id="category">
+				<target>Kategorie</target>
+			</trans-unit>
+			<trans-unit id="attribute">
+				<target>Ausstattung</target>
+			</trans-unit>
+			<trans-unit id="book">
+				<target>Buchung</target>
+			</trans-unit>
+			<trans-unit id="category">
+				<target>Kategorie</target>
+			</trans-unit>
+			<trans-unit id="name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="attribute">
+				<target>Ausstattung</target>
+			</trans-unit>
+			<trans-unit id="name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="icon">
+				<target>Icon</target>
+			</trans-unit>
+			<trans-unit id="book">
+				<target>Buchung</target>
+			</trans-unit>
+			<trans-unit id="arrival">
+				<target>Anreise</target>
+			</trans-unit>
+			<trans-unit id="departure">
+				<target>Abreise</target>
+			</trans-unit>
+			<trans-unit id="feuseruid">
+				<target>Feuseruid</target>
+			</trans-unit>
+
+			<trans-unit id="january">
+				<target>Januar</target>
+			</trans-unit>
+			<trans-unit id="februar">
+				<target>Februar</target>
+			</trans-unit>
+			<trans-unit id="march">
+				<target>März</target>
+			</trans-unit>
+			<trans-unit id="april">
+				<target>April</target>
+			</trans-unit>
+			<trans-unit id="may">
+				<target>Mai</target>
+			</trans-unit>
+			<trans-unit id="june">
+				<target>Juni</target>
+			</trans-unit>
+			<trans-unit id="july">
+				<target>Juli</target>
+			</trans-unit>
+			<trans-unit id="august">
+				<target>August</target>
+			</trans-unit>
+			<trans-unit id="september">
+				<target>September</target>
+			</trans-unit>
+			<trans-unit id="october">
+				<target>Oktober</target>
+			</trans-unit>
+			<trans-unit id="november">
+				<target>November</target>
+			</trans-unit>
+			<trans-unit id="december">
+				<target>Dezember</target>
+			</trans-unit>
+
+			<trans-unit id="mo">
+				<target>Mo</target>
+			</trans-unit>
+			<trans-unit id="tu">
+				<target>Di</target>
+			</trans-unit>
+			<trans-unit id="we">
+				<target>Mi</target>
+			</trans-unit>
+			<trans-unit id="th">
+				<target>Do</target>
+			</trans-unit>
+			<trans-unit id="fr">
+				<target>Fr</target>
+			</trans-unit>
+			<trans-unit id="sa">
+				<target>Sa</target>
+			</trans-unit>
+			<trans-unit id="su">
+				<target>So</target>
+			</trans-unit>
+
+			<trans-unit id="dayNames">
+				<target>["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]</target>
+			</trans-unit>
+			<trans-unit id="dayNamesMin">
+				<target>["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]</target>
+			</trans-unit>
+			<trans-unit id="monthNames">
+				<target>["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober",  "November", "Dezember"]</target>
+			</trans-unit>
+
+			<trans-unit id="departureBeforeArrival">
+				<target>Das Abreisedatum ist vor/gleich dem Anreisedatum. Bitte korrigieren Sie Ihre Eingaben!</target>
+			</trans-unit>
+
+			<trans-unit id="arrival">
+				<target>Anreise</target>
+			</trans-unit>
+			<trans-unit id="departure">
+				<target>Abreise</target>
+			</trans-unit>
+
+			<trans-unit id="noAvailableFlats">
+				<target>Für den gewünschten Zeitraum gibt es keine buchbaren Ferienwohnungen!</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

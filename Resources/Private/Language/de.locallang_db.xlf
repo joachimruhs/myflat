@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat">
+		<header/>
+		<body>
+			<trans-unit id="tx_myflat_domain_model_flat">
+				<source>Flat</source>
+				<target>Ferienwohnung</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.address">
+				<source>Address</source>
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.zipcode">
+				<source>Zipcode</source>
+				<target>Postleitzahl</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.city">
+				<source>City</source>
+				<target>Stadt</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.country">
+				<source>Country</source>
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.capacity">
+				<source>Capacity</source>
+				<target>Kapazität</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.lat">
+				<source>Lat</source>
+				<target>Breitengrad</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.lon">
+				<source>Lon</source>
+				<target>Längengrad</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.images">
+				<source>Images</source>
+				<target>Bilder</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.category">
+				<source>Category</source>
+				<target>Kategorie</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.attribute">
+				<source>Attribute</source>
+				<target>Auststattung</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_flat.book">
+				<source>Book</source>
+				<target>Buchung</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_category">
+				<source>Category</source>
+				<target>Kategorie</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_category.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_attribute">
+				<source>Attribute</source>
+				<target>Ausstattung</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_attribute.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_attribute.icon">
+				<source>Icon</source>
+				<target>Icon</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_book">
+				<source>Book</source>
+				<target>Buchung</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_book.arrival">
+				<source>Arrival</source>
+				<target>Anreise</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_book.departure">
+				<source>Departure</source>
+				<target>Abreise</target>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_book.feuseruid">
+				<source>Feuseruid</source>
+			</trans-unit>
+			<trans-unit id="tx_myflat_domain_model_book.notes">
+				<source>Notes</source>
+				<target>Bemerkungen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

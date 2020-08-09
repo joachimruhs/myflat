@@ -1,0 +1,27 @@
+{
+  "name": "wsr/myflat",
+  "description": "Flat manager, shows bookings of holiday flats in calendars, availability check included.",
+  "keywords": ["TYPO3", "extension", "vacation flat", "calendar", "availability check"],
+  "homepage": "https://www.web-services-ruhs.de",
+  "authors": [
+    {
+      "name": "Joachim Ruhs",
+      "email": "postmaster@joachim-ruhs.de"
+    }
+  ],
+  "license": "GPL-2.0+",
+  "type": "typo3-cms-extension",
+  "require": {
+	"typo3/cms-core": "^9.5.20 || ^10.4.6",
+	"typo3/cms-frontend": "^9.5.20 || ^10.4.6"
+  },
+  "replace": {
+    "wsr/myflat": "self.version",
+    "typo3-ter/myflat": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "WSR\\Myflat\\": "Classes/"
+    }
+  }
+}

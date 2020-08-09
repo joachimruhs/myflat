@@ -1,0 +1,104 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:my="http://typo3.org/ns/WSR/Myflat/ViewHelpers"
+	  xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+
+<f:flashMessages />
+
+
+
+
+<div class="flatName">{flat.name}</div>
+<div class="flatAddress">{flat.address}</div>
+<div class="flatAddress">{flat.zipcode} {flat.city}</div>
+
+<div class="flatCapacity">{flat.capacity} Personen</div>
+<div class="flatDescription"><f:format.raw>{flat.description}</f:format.raw></div>
+
+
+<!-- ordering of images -->
+<f:comment>
+	It seems vhs 4.3 is not compatible with this sorting
+</f:comment>
+
+<f:for each="{flat.images->v:iterator.sort(order: 'ASC', sortBy: 'originalResource.originalFile.identifier')}" as="im" iteration="iter">
+	<f:if condition="{iter.index} == 0">
+		<f:then>
+			<f:image src="fileadmin/{im.originalResource.originalFile.identifier}"  width="310" title="{im.originalResource.title}"/>
+			<br />
+		</f:then>
+		<f:else>
+			<f:image src="fileadmin/{im.originalResource.originalFile.identifier}"  width="150" title="{im.originalResource.title}"/>
+		</f:else>
+	</f:if>
+</f:for>
+
+
+<f:comment>
+<ul class="flatImages">
+<f:for each="{flat.images}" as="image">
+	<li><f:image src="fileadmin/{image.originalResource.originalFile.identifier}"  width="150" title="{image.originalResource.title}"/></li>			
+<f:comment>
+	<f:debug>{image.originalResource.title}</f:debug>
+	<f:debug>{image.originalResource.originalFile.identifier}</f:debug>
+	<f:debug>{image.originalResource.description}</f:debug>
+</f:comment>
+</f:for>
+</ul>
+</f:comment>
+
+<div class="clearer"></div>
+
+
+<div class="theMultiRowCalendar">
+<f:for each="{years}" as="theYear">
+	<f:if condition="{theYear} == {year}">
+		<f:then>
+			<span style="font-weight: bold;">
+			<f:link.action action="multirowcalendar" arguments="{flatUid : flat.uid, year : theYear}">	{theYear}</f:link.action>
+			</span>
+		</f:then>
+		<f:else>
+			<f:link.action action="multirowcalendar" arguments="{flatUid : flat.uid, year : theYear}">	{theYear}</f:link.action>
+		</f:else>
+	</f:if>
+		
+</f:for>
+
+	<div class="calendarYear">{year}</div>
+<f:format.raw>
+	<my:multiRowCalendar year="{year}" bookings="{flat.book}" settings="{settings}"/>
+</f:format.raw>
+</div>
+
+<div class="clearer"></div>
+
+<f:comment>
+<f:for each="{flat.book}" as="booking">
+	<f:format.date format="d.m.Y">{booking.arrival}</f:format.date> - <f:format.date format="d.m.Y">{booking.departure}</f:format.date>
+	<br />
+</f:for>
+</f:comment>
+
+
+
+</f:section>
+</html>
