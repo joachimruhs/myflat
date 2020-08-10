@@ -1,7 +1,14 @@
 <?php
+
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
 if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
+
+$Typo3Version = GeneralUtility::makeInstance(TYPO3\CMS\Core\Information\Typo3Version::class);
+$version9 = \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger($Typo3Version->getBranch()) >= \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger('9.3');
+$generalLanguageFilePrefix = $version9 ? 'LLL:EXT:core/Resources/Private/Language/' : 'LLL:EXT:lang/Resources/Private/Language/';
 
 return array(
 	'ctrl' => array(
@@ -12,7 +19,6 @@ return array(
 		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
 		'default_sortby' => 'order by arrival desc',
-		
 		'languageField' => 'sys_language_uid',
 		'transOrigPointerField' => 'l10n_parent',
 		'transOrigDiffSourceField' => 'l10n_diffsource',
@@ -39,7 +45,7 @@ return array(
 	
 		'sys_language_uid' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
+			'label' => $generalLanguageFilePrefix . 'locallang_general.xlf:LGL.language',
 			'config' => array(
 				'type' => 'select',
 				'renderType' => 'selectSingle',				
@@ -73,7 +79,7 @@ return array(
 
 		'hidden' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+			'label' => $generalLanguageFilePrefix . 'locallang_general.xlf:LGL.hidden',
 			'config' => array(
 				'type' => 'check',
 			),
