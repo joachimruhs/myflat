@@ -196,14 +196,14 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 		$years = array (
 			(date('Y', time()) - 1),
-			(date('Y', time())),
+			(date('Y', time())) + 0,
 			(date('Y', time()) + 1)
 		);
 		
 		$this->view->assign('years', $years);
 
 
-		$this->view->assign('year', $this->_GP['year']);
+		$this->view->assign('year', intval($this->_GP['year']));
 		$this->view->assign('flat', $flat);
 		
 	}
