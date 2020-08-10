@@ -1,7 +1,11 @@
 <?php
 namespace WSR\Myflat\ViewHelpers;
 
-class MultiRowCalendarViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+
+
+class MultiRowCalendarViewHelper extends AbstractViewHelper {
 	/**
 	* Arguments Initialization
 	*/
@@ -11,22 +15,23 @@ class MultiRowCalendarViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstra
 		$this->registerArgument('settings', 'mixed', 'The settings', TRUE);
 	}
 
-
-
     /**
     * Returns the multirow calendar
-    *
+    * 
+    * @param array $arguments 
+    * @param \Closure $renderChildrenClosure
+    * @param RenderingContextInterface $renderingContext
     * @return string
     */
-    public function render() {
+    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
+    {
+	
+		$year = (int) $arguments['year'];
+		$theYear = $year;
 
-	$year = (int) $this->arguments['year'];
-	$theYear = $year;
-
-		$bookings = $this->arguments['bookings'];
-		$this->settings = $this->arguments['settings'];
+		$bookings = $arguments['bookings'];
+		$settings = $arguments['settings'];
 		
-//$out = 'Her we are in the viewhelper for multirow calendar!';
 		$startOfYear = mktime(0, 0, 0, 1, 1, $year);
 		$endOfYear = mktime(0, 0, 0, 12, 31, $year);
 	
@@ -61,12 +66,12 @@ class MultiRowCalendarViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstra
 
 //		$out = $theYear;
 
-		$this->conf['calendarColumns'] = 2;
+		$conf['calendarColumns'] = 2;
 		$column = 1;
-		$this->conf['displayMode'] = 'monthMultiRow';
-		$this->conf['showDaysShortcuts'] = 1;
-		$this->conf['startOfWeek'] = 'monday';
-		$this->conf['markWeekends'] = 1; 
+		$conf['displayMode'] = 'monthMultiRow';
+		$conf['showDaysShortcuts'] = 1;
+		$conf['startOfWeek'] = 'monday';
+		$conf['markWeekends'] = 1; 
 
             // month loop
             for ($m = 1; $m < 13; $m++) {
@@ -74,30 +79,30 @@ class MultiRowCalendarViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstra
                 // adding leading zero
                 $mon = ($m < 10) ? '0'. $m : $m ;
 
-                if ( $this->conf['displayMode'] == 'monthMultiRow' ) {
-                    if ($column-1 % $this->conf['calendarColumns'] == 0)
+                if ( $conf['displayMode'] == 'monthMultiRow' ) {
+                    if ($column-1 % $conf['calendarColumns'] == 0)
                         $out.= '<tr>';
                         $out .= '<td class="monthMultiRow"><table class="tableMultiRow"><tr><td class="monthNameMultiRow" colspan="7">'.
-						$this->settings['monthLabels'][$m - 1] .
+						$settings['monthLabels'][$m - 1] .
 //						(date("M", strtotime($theYear."-".$mon."-01"))).
 						'</td></tr>';
-                        if ( $this->conf['showDaysShortcuts'] == 1 ) {
+                        if ( $conf['showDaysShortcuts'] == 1 ) {
                             // display the daynames
                             $out .= '<tr>';
-                            $out .= ($this->conf['startOfWeek'] == 'sunday')? '<td class="dayNames">'.('Sun').'</td>':'';
+                            $out .= ($conf['startOfWeek'] == 'sunday')? '<td class="dayNames">'.('Sun').'</td>':'';
                             $out .=
-                            '<td class="dayNames">'. $this->settings['dayLabels'][0].'</td><td class="dayNames">'.$this->settings['dayLabels'][1].
-                            '</td><td class="dayNames">'.$this->settings['dayLabels'][2].'</td><td class="dayNames">'.$this->settings['dayLabels'][3].
-                            '</td><td class="dayNames">'.$this->settings['dayLabels'][4].'</td><td class="dayNames">'.$this->settings['dayLabels'][5];
-                            $out .= ($this->conf['startOfWeek'] == 'monday')?'</td><td class="dayNames">'.$this->settings['dayLabels'][6].'</td></tr>':'</td></tr>';
+                            '<td class="dayNames">'. $settings['dayLabels'][0].'</td><td class="dayNames">'.$settings['dayLabels'][1].
+                            '</td><td class="dayNames">'.$settings['dayLabels'][2].'</td><td class="dayNames">'.$settings['dayLabels'][3].
+                            '</td><td class="dayNames">'.$settings['dayLabels'][4].'</td><td class="dayNames">'.$settings['dayLabels'][5];
+                            $out .= ($conf['startOfWeek'] == 'monday')?'</td><td class="dayNames">'.$settings['dayLabels'][6].'</td></tr>':'</td></tr>';
                         }
                 }
 
                 // calculating the left spaces to get the layout right
-                if ( $this->conf['displayMode'] != 'monthSingleRow' )
+                if ( $conf['displayMode'] != 'monthSingleRow' )
                     $out .= '<tr>';
                 $wd = date('w', strtotime($theYear."-".$m."-"."1"));
-                if ($this->conf['startOfWeek'] == 'monday') {
+                if ($conf['startOfWeek'] == 'monday') {
                     $wd = ($wd == 0)? 7 : $wd;
                     if ($wd != 1 ) {
                         for ( $s = 1; $s <  $wd ; $s++){
@@ -161,19 +166,18 @@ $startAndEnd = 0;
 				}
 */				
 
-
                 // display the day with correct class
                 if ( $weekend == 1){
                     if ( ($booked == 1 && !$start && !$end)  ) {
-                        $out .= ($this->conf['markWeekends'])? '<td class="bookedWeekend'. $onRequestWeekend . '" '. $title.$onClick .'>' .
+                        $out .= ($conf['markWeekends'])? '<td class="bookedWeekend'. $onRequestWeekend . '" '. $title.$onClick .'>' .
                                  '<div>'.$d .'</div></td>':'<td class="bookedDay'. $onRequestWeekend . '" '. $title . $onClick .'><div>'.$d.'</div></td>';
                     }
                     if ( ($booked == 1 && $start && !$end && !$startAndEnd)  ) {
-                        $out .= ($this->conf['markWeekends'])? '<td class="bookedWeekend bookingStart'. $onRequestWeekend . '" '. $title.$onClick .'>' .
+                        $out .= ($conf['markWeekends'])? '<td class="bookedWeekend bookingStart'. $onRequestWeekend . '" '. $title.$onClick .'>' .
                                  '<div>'.$d .'</div></td>':'<td class="bookedDay bookingStart'. $onRequestWeekend . '" '. $title . $onClick .'><div>'.$d.'</div></td>';
                     }
 					if ( $booked == 0){
-						$out .= ($this->conf['markWeekends'])? '<td class="vacantWeekend"><div>' . $d . '</div></td>':'<td class="vacantDay"><div>'.$d.'</div></td>';
+						$out .= ($conf['markWeekends'])? '<td class="vacantWeekend"><div>' . $d . '</div></td>':'<td class="vacantDay"><div>'.$d.'</div></td>';
 					}
                     if ( $booked == 1 && $end == 1 && !$startAndEnd ){
                         $out .= '<td class="bookingEnd"><div>' . $d . '</div></td>';
@@ -205,17 +209,12 @@ $startAndEnd = 0;
 
                 }
 
-
-
-                if ($this->conf['startOfWeek'] == 'monday')
-                if ( ( date('w', strtotime($theYear."-".$m."-".$d)) ) == 0 && $this->conf['displayMode'] == 'monthMultiRow') {
+                if ($conf['startOfWeek'] == 'monday')
+                if ( ( date('w', strtotime($theYear."-".$m."-".$d)) ) == 0 && $conf['displayMode'] == 'monthMultiRow') {
                     $out .= "</tr><tr>";
 					$weekday = 0;
                 }
 				$weekday++;
-
-
-
 
             } //($d=1; $d <= $lengthOfMonth[$m]; $d++) day-loop
 
@@ -223,12 +222,8 @@ $startAndEnd = 0;
 				$out .= '<td></td>';
 			}
 
-
 			$out .= '</table></table>';
-		
 		}
-//			$out .= '</table>';
-//		$out .= '</table>';
 		
 		return $out;
 	}

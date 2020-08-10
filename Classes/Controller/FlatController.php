@@ -1,6 +1,7 @@
 <?php
 namespace WSR\Myflat\Controller;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /***************************************************************
  *
@@ -76,9 +77,12 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		if (count($flats) == 1) {
 			$this->_GP['flatUid'] = $flats[0]->getUid();			
 			$this->forward("multirowcalendar", NULL, NULL, $this->_GP);
-			}
+		}
 
-		$this->view->assign('Lvar', $GLOBALS['TSFE']->config['config']['sys_language_uid']);
+		$context = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Context\Context::class);
+		$sys_language_uid = $context->getPropertyFromAspect('language', 'id'); 
+		$this->view->assign('Lvar', $sys_language_uid);
+
 		$this->view->assign('flats', $flats);
 	}
 
