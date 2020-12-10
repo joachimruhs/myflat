@@ -128,14 +128,12 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	public function checkAvailability($uid, $arrival, $departure) {
 		$query = $this ->createQuery();
 
-//		debug(date('d.M.Y', $arrival) . ' - ' . date('d.M.Y', $departure));
-
 		$result = $query->statement("select count(*) as counts from tx_myflat_domain_model_book a
 									where flat = " . intval($uid) ." AND a.deleted = 0
-									 AND (" . $arrival . " > arrival AND " . $arrival . " < departure
-									 OR " . $departure ." > arrival AND " . $departure . " < departure
-									 OR " . $arrival ." <= arrival AND " . $departure . " >= departure
-									 OR " . $arrival ." = arrival AND " . $departure . " = departure
+									 AND (" . intval($arrival) . " > arrival AND " . intval($arrival) . " < departure
+									 OR " . intval($departure) ." > arrival AND " . intval($departure) . " < departure
+									 OR " . intval($arrival) ." <= arrival AND " . intval($departure) . " >= departure
+									 OR " . intval($arrival) ." = arrival AND " . intval($departure) . " = departure
 									 
 									 )
 									"  )-> execute(true);
