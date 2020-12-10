@@ -1,6 +1,14 @@
 <?php
 namespace WSR\Myflat\ViewHelpers;
 
+/**
+ * This file is part of the "myflat" Extension for TYPO3 CMS.
+ *
+ * For the full license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ */
+
+
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 
