@@ -131,7 +131,7 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 //		debug(date('d.M.Y', $arrival) . ' - ' . date('d.M.Y', $departure));
 
 		$result = $query->statement("select count(*) as counts from tx_myflat_domain_model_book a
-									where flat = " . $uid ." AND a.deleted = 0
+									where flat = " . intval($uid) ." AND a.deleted = 0
 									 AND (" . $arrival . " > arrival AND " . $arrival . " < departure
 									 OR " . $departure ." > arrival AND " . $departure . " < departure
 									 OR " . $arrival ." <= arrival AND " . $departure . " >= departure
