@@ -38,13 +38,6 @@ Click on flat name will show the multirowcalendar.
 	:width: 500px
 	:alt: Result
 
-
-
-**MultiRowCalendar1** 
-
-.. image:: ../Images/Introduction/MultiRowCalendar1.png
-	:width: 500px
-	:alt: MultiRowCalendar
     
 
 **MultiRowCalendar2** 
