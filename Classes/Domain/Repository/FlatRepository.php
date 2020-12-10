@@ -117,7 +117,7 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 */
 		$query->matching(
 			$query->logicalAnd(
-				$query->equals('uid', $uid),
+				$query->equals('uid', intval($uid)),
 				$query->equals('deleted', 0)
 			)
 		);
