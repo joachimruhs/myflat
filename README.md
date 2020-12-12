@@ -10,7 +10,7 @@ What does it do
 
 Shows the booking of holiday flats in calendars. An availability check is implemented too.
 
-#### Plugin AjaxSearch with infoWindow
+#### Multirowcalendar
 ![Calendar](Documentation/Images/Introduction/MultiRowCalendar2.png "Booking Calendar")
 
 
