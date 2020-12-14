@@ -125,24 +125,6 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	}	
 	
 	
-	public function checkAvailability($uid, $arrival, $departure) {
-		$query = $this ->createQuery();
-
-		$result = $query->statement("select count(*) as counts from tx_myflat_domain_model_book a
-									where flat = " . intval($uid) ." AND a.deleted = 0
-									 AND (" . intval($arrival) . " > arrival AND " . intval($arrival) . " < departure
-									 OR " . intval($departure) ." > arrival AND " . intval($departure) . " < departure
-									 OR " . intval($arrival) ." <= arrival AND " . intval($departure) . " >= departure
-									 OR " . intval($arrival) ." = arrival AND " . intval($departure) . " = departure
-									 
-									 )
-									"  )-> execute(true);
-
-		if ($result[0]['counts']) return false;
-		else return true;
-
-	}
-	
 	public function findAllOverwrite($capacity) {
 		$query = $this ->createQuery();
 

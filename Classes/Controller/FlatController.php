@@ -35,12 +35,23 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
     /**
      * Inject a flatRepository to enable DI
      *
-     * @param \WSR\Myflat\Domain\Repository\FlatRepository $feUserRepository
+     * @param \WSR\Myflat\Domain\Repository\FlatRepository $flatRepository
      * @return void
      */
     public function injectFlatRepository(\WSR\Myflat\Domain\Repository\FlatRepository $flatRepository) {
         $this->flatRepository = $flatRepository;
     }
+
+    /**
+     * Inject a bookRepository
+     *
+     * @param \WSR\Myflat\Domain\Repository\BookRepository $bookRepository
+     * @return void
+     */
+    public function injectBookRepository(\WSR\Myflat\Domain\Repository\BookRepository $bookRepository) {
+        $this->bookRepository = $bookRepository;
+    }
+
 
 	/**
 	 * action list
@@ -121,7 +132,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		for ($i = 0; $i < count($flats); $i++) {
 			$uid = $flats[$i]['uid'];
 			// now get the available flats		
-			$avail = $this->flatRepository->checkAvailability($uid, $arrival, $departure);
+			$avail = $this->bookRepository->checkAvailability($uid, $arrival, $departure);
 			if ($avail) {
 				$availableFlats[] = $flats[$i];
 			}
@@ -183,8 +194,6 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		);
 		
 		$this->view->assign('years', $years);
-
-
 		$this->view->assign('year', intval($this->_GP['year']));
 		$this->view->assign('flat', $flat);
 		
