@@ -30,7 +30,14 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <div class="flatCapacity">{flat.capacity} Personen</div>
 <div class="flatDescription"><f:format.raw>{flat.description}</f:format.raw></div>
 
-
+<div class="attributes">
+	<f:for each="{flat.attribute}" as="attribute" iteration="flatIteration">
+		<div>{attribute.name}
+		<f:if condition="{attribute.icon.originalResource.originalFile.identifier} > ''">
+			<img src="fileadmin/{attribute.icon.originalResource.originalFile.identifier}"/>
+		</f:if>
+	</f:for>
+</div>
 <!-- ordering of images -->
 <f:comment>
 	It seems vhs 4.3 is not compatible with this sorting
