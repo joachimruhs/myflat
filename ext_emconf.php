@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "myflat".
  *
- * Auto generated 12-01-2018 19:14
+ * Auto generated 27-07-2021 10:15
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -18,14 +18,13 @@ $EM_CONF[$_EXTKEY] = array (
   'author_email' => 'postmaster@joachim-ruhs.de',
   'state' => 'beta',
   'uploadfolder' => true,
-  'createDirs' => '',
   'clearCacheOnLoad' => 0,
-  'version' => '0.4.8',
+  'version' => '0.4.9',
   'constraints' => 
   array (
     'depends' => 
     array (
-      'typo3' => '9.5.20-10.4.99',
+      'typo3' => '9.5.28-10.4.99',
       'vhs' => '6.0.5',
     ),
     'conflicts' => 
