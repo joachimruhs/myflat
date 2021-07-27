@@ -24,7 +24,7 @@
     "psr-4": {
       "WSR\\Myflat\\": "Classes/"
     }
-  }
+  },
   "extra": {
     "typo3/cms": {
        "extension-key": "myflat"
