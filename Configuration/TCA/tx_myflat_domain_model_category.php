@@ -19,8 +19,6 @@ return array(
 		'delete' => 'deleted',
 		'enablecolumns' => array(
 			'disabled' => 'hidden',
-			'starttime' => 'starttime',
-			'endtime' => 'endtime',
 		),
 		'searchFields' => 'name,',
 		'iconfile' => 'EXT:myflat/Resources/Public/Icons/tx_myflat_domain_model_category.gif'

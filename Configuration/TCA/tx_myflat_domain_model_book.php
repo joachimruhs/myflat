@@ -25,8 +25,6 @@ return array(
 		'delete' => 'deleted',
 		'enablecolumns' => array(
 			'disabled' => 'hidden',
-			'starttime' => 'starttime',
-			'endtime' => 'endtime',
 		),
 		'searchFields' => 'arrival,departure,feuseruid,',
 		'iconfile' => 'EXT:myflat/Resources/Public/Icons/tx_myflat_domain_model_book.gif'
