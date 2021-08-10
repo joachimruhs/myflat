@@ -26,8 +26,8 @@ return array(
 		'delete' => 'deleted',
 		'enablecolumns' => array(
 			'disabled' => 'hidden',
-			'starttime' => 'starttime',
-			'endtime' => 'endtime',
+//			'starttime' => 'starttime',
+//			'endtime' => 'endtime',
 		),
 		'searchFields' => 'name,address,zipcode,city,country,capacity,lat,lon,description,images,category,attribute,book,',
 		'iconfile' => 'EXT:myflat/Resources/Public/Icons/tx_myflat_domain_model_flat.gif'

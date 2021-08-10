@@ -170,6 +170,22 @@ resultPageId
         -
          
 
+displayOnlyPresentAndFutureMonths
+"""""""""""""""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+        displayOnlyPresentAndFutureMonths
+
+   Data type
+         boolean
+
+   Description
+         If set, shows only current and future months in the calendar.
+
+   Default
+        -
 
 
 

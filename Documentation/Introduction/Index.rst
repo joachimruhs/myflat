@@ -15,7 +15,8 @@ the extension.
 What's new?
 ^^^^^^^^^^^
 
-This is the first public release.
+New configuration option 'displayOnlyPresentAndFutureMonths'. This may be useful in tabs.
+
 The configuration of the extension is done with the constant editor or with typoscript.
 
 

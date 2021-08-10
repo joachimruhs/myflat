@@ -33,6 +33,9 @@ plugin.tx_myflat {
 		# cat=plugin.tx_myflat/pageUid; type=int; label=Result page ID: Result page ID
 		resultPageId = 
 
+		# cat=plugin.tx_myflat/displayOnlyPresentAndFutureMonths; type=boolean; label=displayOnlyPresentAndFutureMonths: Show only current and future months in calendar
+		displayOnlyPresentAndFutureMonths = 
+
 	}
 
 }

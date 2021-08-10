@@ -1,6 +1,9 @@
 <?php
 namespace WSR\Myflat\Domain\Repository;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+
 /**
  * This file is part of the "myflat" Extension for TYPO3 CMS.
  *
@@ -60,35 +63,47 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	} 
 		
 
-  
-	public function findByUidAndLang($uid, $storagePid){
-		$query = $this ->createQuery();
+	/**
+	 * Find all flats in storagePid with $language
+	 *
+	 * @param int uid not used !!!
+	 * @param int  $storagePid
+	 * @param int  $language
+	 * 
+	 * @return array flats
+	 */  
+	public function findByUidAndLang($uid, $storagePid, $languageUid) {
+        $queryBuilder = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)
+            ->getQueryBuilderForTable('tx_myflat_domain_model_flat');
 
-		$query->getQuerySettings()->setRespectStoragePage(TRUE);
+        $queryBuilder->select('*')->from('tx_myflat_domain_model_flat', 'a');
 
-//        $query->getQuerySettings()->setStoragePageIds(array(1 => $storagePid));
+        $arrayOfPids = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $storagePid, TRUE);
 
-		$language = $_GET['L'];
-		if($language) {
-		  $query->getQuerySettings()->setLanguageUid(intval($language));
-		}
-		else $query->getQuerySettings()->setLanguageUid(0);
-
-/*		
-		$query->matching(
-			$query->logicalAND(
-				$query->logicalOR(
-					$query->equals('l10n_parent', $uid),
-					$query->equals('uid1', $uid)
+        $queryBuilder->where(
+            $queryBuilder->expr()->in(
+                'a.pid',
+                $queryBuilder->createNamedParameter(
+                    $arrayOfPids,
+                    \Doctrine\DBAL\Connection::PARAM_INT_ARRAY
+                )
+            )
+		);
+/* language not used yet
+        $queryBuilder->andWhere(
+			$queryBuilder->expr()->orX(	
+	            $queryBuilder->expr()->eq('sys_language_uid',
+	                  $queryBuilder->createNamedParameter($languageUid, \PDO::PARAM_INT)
 				),
-				$query->equals('uid', $uid)
-	
+	            $queryBuilder->expr()->eq('sys_language_uid',
+	                  $queryBuilder->createNamedParameter(-1, \PDO::PARAM_INT)
+				)
 			)
 		);
-*/
-		
-		return $query->execute()->toArray();
-		}
+*/		
+        $result = $queryBuilder->execute()->fetchAll();
+        return $result;
+	}
 
 	public function findByUid($uid){
 		$query = $this ->createQuery();
@@ -104,7 +119,6 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		  $query->getQuerySettings()->setLanguageUid(intval($language));
 		}
 		else $query->getQuerySettings()->setLanguageUid(0);
-
 
 /*
 		$query->matching(
@@ -125,24 +139,51 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	}	
 	
 	
-	public function findAllOverwrite($capacity) {
-		$query = $this ->createQuery();
+	/**
+	 * Find all flats in storagePid with capacity larger and eval $capacity
+	 *
+	 * @param int capacity
+	 * @param int  $storagePid
+	 * @param int  $language
+	 * 
+	 * @return array flats
+	 */  
+	public function findAllOverwrite($capacity, $storagePid, $languageUid) {
+        $queryBuilder = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)
+           ->getQueryBuilderForTable('tx_myflat_domain_model_flat');
 
-		$language = $_GET['L'];
-		if($language) {
-		  $query->getQuerySettings()->setLanguageUid(intval($language));
-		}
-		else $query->getQuerySettings()->setLanguageUid(0);
-		
-		if ($capacity) {
-			$query->matching(
-				$query->logicalAnd(
-					$query->greaterThanOrEqual('capacity', intval($capacity))
+        $queryBuilder->select('*')->from('tx_myflat_domain_model_flat', 'a');
+
+        $arrayOfPids = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $storagePid, TRUE);
+
+        $queryBuilder->where(
+            $queryBuilder->expr()->in(
+                'a.pid',
+                $queryBuilder->createNamedParameter(
+                    $arrayOfPids,
+                    \Doctrine\DBAL\Connection::PARAM_INT_ARRAY
+                )
+            )
+		);
+        $queryBuilder->andWhere(
+/* language not used yet
+			$queryBuilder->expr()->orX(	
+	            $queryBuilder->expr()->eq('sys_language_uid',
+	                  $queryBuilder->createNamedParameter($languageUid, \PDO::PARAM_INT)
+				),
+	            $queryBuilder->expr()->eq('sys_language_uid',
+	                  $queryBuilder->createNamedParameter(-1, \PDO::PARAM_INT)
 				)
-			);
-		}
-		
-		return $query->execute(true);
+			),
+*/
+			$queryBuilder->expr()->andX(
+	            $queryBuilder->expr()->gte('capacity',
+	                  $queryBuilder->createNamedParameter($capacity, \PDO::PARAM_INT)
+				)
+			)
+		);
+        $result = $queryBuilder->execute()->fetchAll();
+        return $result;
 	}
 	
 

@@ -41,7 +41,11 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
 		$settings = $arguments['settings'];
 		
 		$startOfYear = mktime(0, 0, 0, 1, 1, $year);
-		$endOfYear = mktime(0, 0, 0, 12, 31, $year);
+        if ($settings['displayOnlyPresentAndFutureMonths']) {
+			$endOfYear = mktime(0, 0, 0, 12, 31, $year + 1);
+		} else {
+			$endOfYear = mktime(0, 0, 0, 12, 31, $year);
+		}			
 	
 		for ($i = 0; $i < count($bookings); $i++) {
 			
@@ -60,7 +64,6 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
 			sort($arrivals);
 			sort($departures);
 		}
-
 
         $lengthOfMonth = array (1 => 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 
@@ -81,17 +84,31 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
 		$conf['startOfWeek'] = 'monday';
 		$conf['markWeekends'] = 1; 
 
-            // month loop
-            for ($m = 1; $m < 13; $m++) {
+            if ($settings['displayOnlyPresentAndFutureMonths'] && $year == date('Y', time())) {
+				$firstMonth = date('n', time());
+				$numberOfYears = 2;
+			} else {
+				$firstMonth = 1;
+				$numberOfYears = 1;
+			}
+
+			for ($myYear = $year; $myYear < $year + $numberOfYears; $myYear++) {
+				if ($myYear > $year) $firstMonth = 1;
+				$theYear = $myYear;
+
+			// month loop
+//            for ($m = $firstMonth; $m < 13; $m++) {
+            for ($m = $firstMonth; $m < 13; $m++) {
 			$out .= '<table class="monthMultiRow">';
                 // adding leading zero
                 $mon = ($m < 10) ? '0'. $m : $m ;
+
 
                 if ( $conf['displayMode'] == 'monthMultiRow' ) {
                     if ($column-1 % $conf['calendarColumns'] == 0)
                         $out.= '<tr>';
                         $out .= '<td class="monthMultiRow"><table class="tableMultiRow"><tr><td class="monthNameMultiRow" colspan="7">'.
-						$settings['monthLabels'][$m - 1] .
+						$settings['monthLabels'][$m - 1] . ' ' .$theYear .
 //						(date("M", strtotime($theYear."-".$mon."-01"))).
 						'</td></tr>';
                         if ( $conf['showDaysShortcuts'] == 1 ) {
@@ -123,7 +140,6 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
                            $out .= '<td class="noDay">&nbsp;</td>';
                          }
                 }
-
             // day loop
             for ($d=1; $d <= $lengthOfMonth[$m]; $d++){
                 if (date("w", strtotime($theYear."-".$mon."-".$d))== 0 || date("w", strtotime($theYear."-".$mon."-".$d))== 6 ){
@@ -135,9 +151,8 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
                 $day = ($d < 10) ? '0'. $d : $d ;
 
 				$booked = 0;
-
-$end = 0;
-$startAndEnd = 0;
+				$end = 0;
+				$startAndEnd = 0;
 				if (is_array($arrivals)) {
 					for ($i = 0; $i < count($arrivals); $i++) {
 						if (mktime(0,0,0,$mon,$day,$theYear) >= $arrivals[$i] &&
@@ -229,9 +244,9 @@ $startAndEnd = 0;
 			for ($wd = 0; $wd < 8 - $weekday; $wd++) {
 				$out .= '<td></td>';
 			}
-
 			$out .= '</table></table>';
 		}
+		} // year loop
 		
 		return $out;
 	}

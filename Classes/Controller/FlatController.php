@@ -15,9 +15,13 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
-	 public function initializeObject1() {
+	 public function initializeObject() {
       	$configuration = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
 		$this->conf['storagePid'] = $configuration['persistence']['storagePid'];
+
+		$context = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Context\Context::class);
+		$this->languageUid = $context->getPropertyFromAspect('language', 'id'); 
+
 
 //$querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
 //$querySettings->setRespectStoragePage(FALSE);
@@ -56,24 +60,23 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	/**
 	 * action list
 	 * 
+     * @param int uid not used anymore !!!
+     * @param int storagePid
+     * 
 	 * @return void
 	 */
 	public function listAction() {
-
 		$this->_GP = $this->request->getArguments();
 
-		$flats = $this->flatRepository->findByUidAndLang(1, $this->conf['storagePid']);
-		
+		$flats = $this->flatRepository->findByUidAndLang(1, $this->conf['storagePid'], $this->languageUid);
 		//\TYPO3\CMS\Core\Utility\DebugUtility::debug($flats, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 
 		// if there is only one flat switch to multirowcalendar
 		if (count($flats) == 1) {
-			$this->_GP['flatUid'] = $flats[0]->getUid();			
+			$this->_GP['flatUid'] = $flats[0]['uid'];			
 			$this->forward("multirowcalendar", NULL, NULL, $this->_GP);
 		}
 
-		$context = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Context\Context::class);
-		$sys_language_uid = $context->getPropertyFromAspect('language', 'id'); 
 		$this->view->assign('Lvar', $sys_language_uid);
 
 		$this->view->assign('flats', $flats);
@@ -128,7 +131,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 		$capacity = $this->_GP['capacity'];
 
-		$flats = $this->flatRepository->findAllOverwrite($capacity);
+		$flats = $this->flatRepository->findAllOverwrite($capacity, $this->conf['storagePid'], $this->languageUid);
 		for ($i = 0; $i < count($flats); $i++) {
 			$uid = $flats[$i]['uid'];
 			// now get the available flats		

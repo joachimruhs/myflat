@@ -28,6 +28,7 @@ plugin.tx_myflat {
 
 	settings {
 		resultPageId = {$plugin.tx_myflat.settings.resultPageId}
+		displayOnlyPresentAndFutureMonths = {$plugin.tx_myflat.settings.displayOnlyPresentAndFutureMonths}
 	}
 
 

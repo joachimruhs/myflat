@@ -40,9 +40,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	</f:for>
 </div>
 <!-- ordering of images -->
-<f:comment>
-	It seems vhs 4.3 is not compatible with this sorting
-</f:comment>
 
 <f:for each="{flat.images->v:iterator.sort(order: 'ASC', sortBy: 'originalResource.originalFile.identifier')}" as="im" iteration="iter">
 	<f:if condition="{iter.index} == 0">
@@ -72,23 +69,30 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <div class="clearer"></div>
 
-
+<f:variable name="cycle" value="{settings.displayOnlyPresentAndFutureMonths}"></f:variable>
 <div class="theMultiRowCalendar">
-<f:for each="{years}" as="theYear">
-	<f:if condition="{theYear} == {year}">
-		<f:then>
-			<span style="font-weight: bold;">
-			<f:link.action action="multirowcalendar" arguments="{flatUid : flat.uid, year : theYear}">	{theYear}</f:link.action>
-			</span>
-		</f:then>
-		<f:else>
-			<f:link.action action="multirowcalendar" arguments="{flatUid : flat.uid, year : theYear}">	{theYear}</f:link.action>
-		</f:else>
-	</f:if>
-		
-</f:for>
+	<div class="yearSelector">
+		<f:if condition="{cycle} == 0">
+		<f:for each="{years}" as="theYear" iteration="iterator">
+			<f:if condition="{iterator.cycle} > {cycle}">
+				<f:if condition="{theYear} == {year}">
+					<f:then>
+						<span style="font-weight: bold;">
+						<f:link.action action="multirowcalendar" arguments="{flatUid : flat.uid, year : theYear}">	{theYear}</f:link.action>
+						</span>
+					</f:then>
+					<f:else>
+						<f:link.action action="multirowcalendar" arguments="{flatUid : flat.uid, year : theYear}">	{theYear}</f:link.action>
+					</f:else>
+				</f:if>
+			</f:if>
+		</f:for>
+		</f:if>
+	</div>
 
-	<div class="calendarYear">{year}</div>
+	<f:if condition="{cycle} == 0">
+		<div class="calendarYear">{year}</div>
+	</f:if>
 <f:format.raw>
 	<my:multiRowCalendar year="{year}" bookings="{flat.book}" settings="{settings}"/>
 </f:format.raw>
