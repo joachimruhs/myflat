@@ -17,7 +17,6 @@
 	"fluidtypo3/vhs": "^6.0"
   },
   "replace": {
-    "wsr/myflat": "self.version",
     "typo3-ter/myflat": "self.version"
   },
   "autoload": {
