@@ -60,7 +60,7 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
 		}	
 	
 	
-		if ($arrivals) {
+		if (isset($arrivals)) {
 			sort($arrivals);
 			sort($departures);
 		}
@@ -141,6 +141,7 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
                          }
                 }
             // day loop
+            $weekday = 0;
             for ($d=1; $d <= $lengthOfMonth[$m]; $d++){
                 if (date("w", strtotime($theYear."-".$mon."-".$d))== 0 || date("w", strtotime($theYear."-".$mon."-".$d))== 6 ){
                     $weekend = 1;

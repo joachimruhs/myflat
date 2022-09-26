@@ -77,7 +77,8 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 			$this->forward("multirowcalendar", NULL, NULL, $this->_GP);
 		}
 
-		$this->view->assign('Lvar', $sys_language_uid);
+
+		$this->view->assign('Lvar', $sys_language_uid ?? 0);
 
 		$this->view->assign('flats', $flats);
 	}
@@ -160,7 +161,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->_GP = $this->request->getArguments();
 
 		// this is used when called by flat list
-		if (!$this->_GP['year']) $this->_GP['year'] = date('Y', time());
+		$this->_GP['year'] = $this->_GP['year'] ?? date('Y', time());
 		
 		$flat = $this->flatRepository->findByUid($this->_GP['flatUid']);
 

@@ -114,7 +114,7 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		$query->getQuerySettings()->setIgnoreEnableFields(!$respectEnableFields);
  
 
-		$language = $_GET['L'];
+		$language = $_GET['L'] ?? 0;
 		if($language) {
 		  $query->getQuerySettings()->setLanguageUid(intval($language));
 		}
