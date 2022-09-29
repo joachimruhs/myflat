@@ -96,6 +96,7 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
 				if ($myYear > $year) $firstMonth = 1;
 				$theYear = $myYear;
 
+            $out = '';
 			// month loop
 //            for ($m = $firstMonth; $m < 13; $m++) {
             for ($m = $firstMonth; $m < 13; $m++) {
@@ -154,7 +155,7 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
 				$booked = 0;
 				$end = 0;
 				$startAndEnd = 0;
-				if (is_array($arrivals)) {
+				if (is_array($arrivals ?? 0)) {
 					for ($i = 0; $i < count($arrivals); $i++) {
 						if (mktime(0,0,0,$mon,$day,$theYear) >= $arrivals[$i] &&
 							mktime(0,0,0,$mon,$day,$theYear) <= $departures[$i]) {
