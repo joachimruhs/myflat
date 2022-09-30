@@ -161,7 +161,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->_GP = $this->request->getArguments();
 
 		// this is used when called by flat list
-		$this->_GP['year'] = $this->_GP['year'] ?? date('Y', time());
+        $this->_GP['year'] = $this->_GP['year'] ?? date('Y', time());
 		
 		$flat = $this->flatRepository->findByUid($this->_GP['flatUid']);
 

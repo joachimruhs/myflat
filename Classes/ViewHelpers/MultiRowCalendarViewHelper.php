@@ -33,10 +33,9 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
     */
     public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
     {
-	
 		$year = (int) $arguments['year'];
 		$theYear = $year;
-
+        
 		$bookings = $arguments['bookings'];
 		$settings = $arguments['settings'];
 		
@@ -91,14 +90,12 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
 				$firstMonth = 1;
 				$numberOfYears = 1;
 			}
+            $out = '';
 
 			for ($myYear = $year; $myYear < $year + $numberOfYears; $myYear++) {
 				if ($myYear > $year) $firstMonth = 1;
 				$theYear = $myYear;
-
-            $out = '';
 			// month loop
-//            for ($m = $firstMonth; $m < 13; $m++) {
             for ($m = $firstMonth; $m < 13; $m++) {
 			$out .= '<table class="monthMultiRow">';
                 // adding leading zero
