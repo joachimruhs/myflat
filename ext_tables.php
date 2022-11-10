@@ -1,7 +1,5 @@
 <?php
-if (!defined('TYPO3_MODE')) {
-	die('Access denied.');
-}
+defined('TYPO3') or die();
 
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_myflat_domain_model_flat', 'EXT:myflat/Resources/Private/Language/locallang_csh_tx_myflat_domain_model_flat.xlf');

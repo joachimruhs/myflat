@@ -3,9 +3,7 @@
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 
-if (!defined ('TYPO3_MODE')) {
-	die ('Access denied.');
-}
+defined('TYPO3') or die();
 
 $Typo3Version = GeneralUtility::makeInstance(TYPO3\CMS\Core\Information\Typo3Version::class);
 $version9 = \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger($Typo3Version->getBranch()) >= \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger('9.3');

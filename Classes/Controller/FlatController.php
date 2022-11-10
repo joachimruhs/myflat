@@ -2,6 +2,8 @@
 namespace WSR\Myflat\Controller;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Extbase\Http\ForwardResponse;
 
 /**
  * This file is part of the "myflat" Extension for TYPO3 CMS.
@@ -74,13 +76,19 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		// if there is only one flat switch to multirowcalendar
 		if (count($flats) == 1) {
 			$this->_GP['flatUid'] = $flats[0]['uid'];			
-			$this->forward("multirowcalendar", NULL, NULL, $this->_GP);
+            return (new ForwardResponse('multirowcalendar'))
+               ->withControllerName('Flat')
+               ->withExtensionName('myflat')
+               ->withArguments($this->_GP)
+          ;
 		}
-
-
 		$this->view->assign('Lvar', $sys_language_uid ?? 0);
-
 		$this->view->assign('flats', $flats);
+	    $this->view->assign('_GP', $this->_GP['tx_myflat_availabilitycheck']);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
+
 	}
 
 	/**
@@ -101,6 +109,9 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	public function availabilityformAction() {
 	    $this->_GP = \TYPO3\CMS\Core\Utility\GeneralUtility::_POST();
 	    $this->view->assign('_GP', $this->_GP['tx_myflat_availabilitycheck']);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
 	}
 	
 
@@ -148,6 +159,10 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->view->assign('arrival', $this->_GP['arrival']);		
 		$this->view->assign('departure', $this->_GP['departure']);		
 		$this->view->assign('flats', $availableFlats);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
+
 	}
 	
 	
@@ -201,6 +216,9 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->view->assign('year', intval($this->_GP['year']));
 		$this->view->assign('flat', $flat);
 		
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
 	}
 
 	/**

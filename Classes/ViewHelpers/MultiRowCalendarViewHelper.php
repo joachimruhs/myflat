@@ -140,6 +140,10 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
                 }
             // day loop
             $weekday = 0;
+            $onClick = '';
+            $title = '';
+            $onRequestWeekend = '';
+            
             for ($d=1; $d <= $lengthOfMonth[$m]; $d++){
                 if (date("w", strtotime($theYear."-".$mon."-".$d))== 0 || date("w", strtotime($theYear."-".$mon."-".$d))== 6 ){
                     $weekend = 1;
@@ -210,10 +214,10 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
                 }
                 if ( $weekend == 0 ) {
                      if ( ($booked == 1 && !$start &&  !$end) ) {
-                        $out .= '<td class="bookedDay' . $onRequest .'" '.$title . $onClick.'><div>' . $d . '</div></td>';
+                        $out .= '<td class="bookedDay" . ' . $title . $onClick.'><div>' . $d . '</div></td>';
                     }
                      if ( ($booked == 1 && $start && !$end && !$startAndEnd) ) {
-                        $out .= '<td class="bookedDay bookingStart' . $onRequest .'" '.$title . $onClick.'><div>' . $d . '</div></td>';
+                        $out .= '<td class="bookedDay bookingStart' . '" '. $title . $onClick.'><div>' . $d . '</div></td>';
                     }
 
                     if ( $booked == 0){

@@ -41,7 +41,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 </div>
 <!-- ordering of images -->
 
-<f:for each="{flat.images->v:iterator.sort(order: 'ASC', sortBy: 'originalResource.originalFile.identifier')}" as="im" iteration="iter">
+<f:for each="{flat.images}" as="im" iteration="iter">
 	<f:if condition="{iter.index} == 0">
 		<f:then>
 			<f:image src="fileadmin/{im.originalResource.originalFile.identifier}"  width="310" title="{im.originalResource.title}"/>

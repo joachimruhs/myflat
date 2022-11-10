@@ -81,22 +81,22 @@ class BookTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function getFeuseruidReturnsInitialValueForInteger() {
+	public function getFeueruidReturnsInitialValueForInteger() {
 		$this->assertSame(
 			0,
-			$this->subject->getFeuseruid()
+			$this->subject->getFeueruid()
 		);
 	}
 
 	/**
 	 * @test
 	 */
-	public function setFeuseruidForIntegerSetsFeuseruid() {
-		$this->subject->setFeuseruid(12);
+	public function setFeueruidForIntegerSetsFeueruid() {
+		$this->subject->setFeueruid(12);
 
 		$this->assertAttributeEquals(
 			12,
-			'feuseruid',
+			'feueruid',
 			$this->subject
 		);
 	}

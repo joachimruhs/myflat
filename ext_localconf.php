@@ -1,11 +1,6 @@
 <?php
-if (!defined('TYPO3_MODE')) {
-	die('Access denied.');
-}
+defined('TYPO3') or die();
 
-if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_branch) >
-        \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger('10.0')
-    ) {
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 	'myflat',
 	'Availabilityform',
@@ -47,57 +42,3 @@ if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(
 		\WSR\Myflat\Controller\FlatController::class => 'list, show, multirowcalendar',
 	]
 );
-} else {
-
-$_EXTKEY = 'myflat';
-
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'WSR.' . $_EXTKEY,
-	'Availabilityform',
-	array(
-		'Flat' => 'availabilityform, list, show, multirowcalendar',
-		'Category' => 'list, show',
-		
-	),
-	// non-cacheable actions
-	array(
-		'Flat' => 'availabilityform, multirowcalendar',
-		'Category' => '',
-		
-	)
-);
-
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'WSR.' . $_EXTKEY,
-	'Availabilitycheck',
-	array(
-		'Flat' => 'availabilitycheck, list, show, multirowcalendar',
-		'Category' => 'list, show',
-		
-	),
-	// non-cacheable actions
-	array(
-		'Flat' => 'availabilitycheck, multirowcalendar',
-		'Category' => '',
-		
-	)
-);
-
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'WSR.' . $_EXTKEY,
-	'Multirowcalendar',
-	array(
-		'Flat' => 'list, multirowcalendar, show, multirowcalendar',
-		'Category' => 'list, show',
-		
-	),
-	// non-cacheable actions
-	array(
-		'Flat' => 'list, show, multirowcalendar',
-		'Category' => '',
-		
-	)
-);
-
-		
-}		

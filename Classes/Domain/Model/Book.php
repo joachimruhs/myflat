@@ -97,13 +97,13 @@ class Book extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Sets the feuseruid
+	 * Sets the feueruid
 	 * 
-	 * @param integer $feuseruid
+	 * @param integer $feueruid
 	 * @return void
 	 */
-	public function setFeuseruid($feuseruid) {
-		$this->feuseruid = $feuseruid;
+	public function setFeueruid($feueruid) {
+		$this->feueruid = $feueruid;
 	}
 
 	/**
@@ -122,7 +122,7 @@ class Book extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return void
 	 */
 	public function setNotes($notes) {
-		$this->notes = $notes;
+		$this->feueruid = $notes;
 	}
 
 	

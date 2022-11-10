@@ -65,7 +65,7 @@ class BookRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 				)
 			)
 		);
-		$count = $queryBuilder->execute()->fetchColumn(0);
+		$count = $queryBuilder->execute()->fetchOne();
 		
 		if ($count) return FALSE;
 		else return TRUE;
