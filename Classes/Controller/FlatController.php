@@ -84,7 +84,8 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		}
 		$this->view->assign('Lvar', $sys_language_uid ?? 0);
 		$this->view->assign('flats', $flats);
-	    $this->view->assign('_GP', $this->_GP['tx_myflat_availabilitycheck']);
+	    $this->view->assign('_GP', $this->_GP['tx_myflat_availabilitycheck'] = $this->_GP['tx_myflat_availabilitycheck'] ?? '');
+
         return $this->responseFactory->createResponse()
             ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
             ->withBody($this->streamFactory->createStream($this->view->render()));
@@ -108,7 +109,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function availabilityformAction() {
 	    $this->_GP = \TYPO3\CMS\Core\Utility\GeneralUtility::_POST();
-	    $this->view->assign('_GP', $this->_GP['tx_myflat_availabilitycheck']);
+	    $this->view->assign('_GP', $this->_GP['tx_myflat_availabilitycheck'] = $this->_GP['tx_myflat_availabilitycheck'] ?? '');
         return $this->responseFactory->createResponse()
             ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
             ->withBody($this->streamFactory->createStream($this->view->render()));
