@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat" target-language="ar">
+    <header/>
+    <body>
+      <trans-unit id="tx_myflat_domain_model_flat">
+        <source>Flat</source>
+        <target state="needs-translation">Flat</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.name">
+        <source>Name</source>
+        <target state="needs-translation">Name</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.address">
+        <source>Address</source>
+        <target state="needs-translation">Address</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.zipcode">
+        <source>Zipcode</source>
+        <target state="needs-translation">Zipcode</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.city">
+        <source>City</source>
+        <target state="needs-translation">City</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.country">
+        <source>Country</source>
+        <target state="needs-translation">Country</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.capacity">
+        <source>Capacity</source>
+        <target state="needs-translation">Capacity</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.lat">
+        <source>Lat</source>
+        <target state="needs-translation">Lat</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.lon">
+        <source>Lon</source>
+        <target state="needs-translation">Lon</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.description">
+        <source>Description</source>
+        <target state="needs-translation">Description</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.images">
+        <source>Images</source>
+        <target state="needs-translation">Images</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.category">
+        <source>Category</source>
+        <target state="needs-translation">Category</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.attribute">
+        <source>Attribute</source>
+        <target state="needs-translation">Attribute</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_flat.book">
+        <source>Book</source>
+        <target state="needs-translation">Book</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_category">
+        <source>Category</source>
+        <target state="needs-translation">Category</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_category.name">
+        <source>Name</source>
+        <target state="needs-translation">Name</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_attribute">
+        <source>Attribute</source>
+        <target state="needs-translation">Attribute</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_attribute.name">
+        <source>Name</source>
+        <target state="needs-translation">Name</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_attribute.icon">
+        <source>Icon</source>
+        <target state="needs-translation">Icon</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_book">
+        <source>Book</source>
+        <target state="needs-translation">Book</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_book.arrival">
+        <source>Arrival</source>
+        <target state="needs-translation">Arrival</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_book.departure">
+        <source>Departure</source>
+        <target state="needs-translation">Departure</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_book.feuseruid">
+        <source>Feuseruid</source>
+        <target state="needs-translation">Feuseruid</target>
+      </trans-unit>
+      <trans-unit id="tx_myflat_domain_model_book.notes">
+        <source>Notes</source>
+        <target state="needs-translation">Notes</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
