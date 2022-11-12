@@ -3,17 +3,17 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat" target-language="de">
     <header/>
     <body>
-      <trans-unit id="arrival.description">
+      <trans-unit id="arrival.description" approved="yes">
         <source>arrival</source>
-        <target state="needs-translation">arrival</target>
+        <target state="final">Anreise</target>
       </trans-unit>
-      <trans-unit id="departure.description">
+      <trans-unit id="departure.description" approved="yes">
         <source>departure</source>
-        <target state="needs-translation">departure</target>
+        <target state="final">Abreise</target>
       </trans-unit>
-      <trans-unit id="feueruid.description">
+      <trans-unit id="feueruid.description" approved="yes">
         <source>feueruid</source>
-        <target state="needs-translation">feueruid</target>
+        <target state="final">Fe User Uid</target>
       </trans-unit>
     </body>
   </file>
