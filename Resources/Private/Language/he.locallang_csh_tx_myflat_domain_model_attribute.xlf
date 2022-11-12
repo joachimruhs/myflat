@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat" target-language="he">
+    <header/>
+    <body>
+      <trans-unit id="name.description">
+        <source>name</source>
+        <target state="needs-translation">name</target>
+      </trans-unit>
+      <trans-unit id="icon.description">
+        <source>icon</source>
+        <target state="needs-translation">icon</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
