@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat" target-language="no">
+    <header/>
+    <body>
+      <trans-unit id="flat">
+        <source>Flat</source>
+        <target state="needs-translation">Flat</target>
+      </trans-unit>
+      <trans-unit id="name">
+        <source>Name</source>
+        <target state="needs-translation">Name</target>
+      </trans-unit>
+      <trans-unit id="address">
+        <source>Address</source>
+        <target state="needs-translation">Address</target>
+      </trans-unit>
+      <trans-unit id="zipcode">
+        <source>Zipcode</source>
+        <target state="needs-translation">Zipcode</target>
+      </trans-unit>
+      <trans-unit id="city">
+        <source>City</source>
+        <target state="needs-translation">City</target>
+      </trans-unit>
+      <trans-unit id="country">
+        <source>Country</source>
+        <target state="needs-translation">Country</target>
+      </trans-unit>
+      <trans-unit id="capacity">
+        <source>Capacity</source>
+        <target state="needs-translation">Capacity</target>
+      </trans-unit>
+      <trans-unit id="lat">
+        <source>Lat</source>
+        <target state="needs-translation">Lat</target>
+      </trans-unit>
+      <trans-unit id="lon">
+        <source>Lon</source>
+        <target state="needs-translation">Lon</target>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Description</source>
+        <target state="needs-translation">Description</target>
+      </trans-unit>
+      <trans-unit id="images">
+        <source>Images</source>
+        <target state="needs-translation">Images</target>
+      </trans-unit>
+      <trans-unit id="category">
+        <source>Category</source>
+        <target state="needs-translation">Category</target>
+      </trans-unit>
+      <trans-unit id="attribute">
+        <source>Attribute</source>
+        <target state="needs-translation">Attribute</target>
+      </trans-unit>
+      <trans-unit id="book">
+        <source>Book</source>
+        <target state="needs-translation">Book</target>
+      </trans-unit>
+      <trans-unit id="category">
+        <source>Category</source>
+        <target state="needs-translation">Category</target>
+      </trans-unit>
+      <trans-unit id="name">
+        <source>Name</source>
+        <target state="needs-translation">Name</target>
+      </trans-unit>
+      <trans-unit id="attribute">
+        <source>Attribute</source>
+        <target state="needs-translation">Attribute</target>
+      </trans-unit>
+      <trans-unit id="name">
+        <source>Name</source>
+        <target state="needs-translation">Name</target>
+      </trans-unit>
+      <trans-unit id="icon">
+        <source>Icon</source>
+        <target state="needs-translation">Icon</target>
+      </trans-unit>
+      <trans-unit id="book">
+        <source>Book</source>
+        <target state="needs-translation">Book</target>
+      </trans-unit>
+      <trans-unit id="arrival">
+        <source>Arrival</source>
+        <target state="needs-translation">Arrival</target>
+      </trans-unit>
+      <trans-unit id="departure">
+        <source>Departure</source>
+        <target state="needs-translation">Departure</target>
+      </trans-unit>
+      <trans-unit id="feuseruid">
+        <source>Feuseruid</source>
+        <target state="needs-translation">Feuseruid</target>
+      </trans-unit>
+      <trans-unit id="january">
+        <source>January</source>
+        <target state="needs-translation">January</target>
+      </trans-unit>
+      <trans-unit id="februar">
+        <source>Februar</source>
+        <target state="needs-translation">Februar</target>
+      </trans-unit>
+      <trans-unit id="march">
+        <source>March</source>
+        <target state="needs-translation">March</target>
+      </trans-unit>
+      <trans-unit id="april">
+        <source>April</source>
+        <target state="needs-translation">April</target>
+      </trans-unit>
+      <trans-unit id="may">
+        <source>May</source>
+        <target state="needs-translation">May</target>
+      </trans-unit>
+      <trans-unit id="june">
+        <source>June</source>
+        <target state="needs-translation">June</target>
+      </trans-unit>
+      <trans-unit id="july">
+        <source>July</source>
+        <target state="needs-translation">July</target>
+      </trans-unit>
+      <trans-unit id="august">
+        <source>August</source>
+        <target state="needs-translation">August</target>
+      </trans-unit>
+      <trans-unit id="september">
+        <source>September</source>
+        <target state="needs-translation">September</target>
+      </trans-unit>
+      <trans-unit id="october">
+        <source>October</source>
+        <target state="needs-translation">October</target>
+      </trans-unit>
+      <trans-unit id="november">
+        <source>November</source>
+        <target state="needs-translation">November</target>
+      </trans-unit>
+      <trans-unit id="december">
+        <source>December</source>
+        <target state="needs-translation">December</target>
+      </trans-unit>
+      <trans-unit id="mo">
+        <source>Mo</source>
+        <target state="needs-translation">Mo</target>
+      </trans-unit>
+      <trans-unit id="tu">
+        <source>Tu</source>
+        <target state="needs-translation">Tu</target>
+      </trans-unit>
+      <trans-unit id="we">
+        <source>We</source>
+        <target state="needs-translation">We</target>
+      </trans-unit>
+      <trans-unit id="th">
+        <source>Th</source>
+        <target state="needs-translation">Th</target>
+      </trans-unit>
+      <trans-unit id="fr">
+        <source>Fr</source>
+        <target state="needs-translation">Fr</target>
+      </trans-unit>
+      <trans-unit id="sa">
+        <source>Sa</source>
+        <target state="needs-translation">Sa</target>
+      </trans-unit>
+      <trans-unit id="su">
+        <source>Su</source>
+        <target state="needs-translation">Su</target>
+      </trans-unit>
+      <trans-unit id="dayNames">
+        <source>["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]</source>
+        <target state="needs-translation">["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]</target>
+      </trans-unit>
+      <trans-unit id="dayNamesMin">
+        <source>["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]</source>
+        <target state="needs-translation">["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]</target>
+      </trans-unit>
+      <trans-unit id="monthNames">
+        <source>["January", "Februar", "March", "April", "May", "June", "July", "August", "September", "October",  "November", "December"]</source>
+        <target state="needs-translation">["January", "Februar", "March", "April", "May", "June", "July", "August", "September", "October",  "November", "December"]</target>
+      </trans-unit>
+      <trans-unit id="departureBeforeArrival">
+        <source>The departure is before the arrival. Please correct your dates!</source>
+        <target state="needs-translation">The departure is before the arrival. Please correct your dates!</target>
+      </trans-unit>
+      <trans-unit id="arrival">
+        <source>Arrival</source>
+        <target state="needs-translation">Arrival</target>
+      </trans-unit>
+      <trans-unit id="departure">
+        <source>Departure</source>
+        <target state="needs-translation">Departure</target>
+      </trans-unit>
+      <trans-unit id="noAvailableFlats">
+        <source>No flats available for the time period!</source>
+        <target state="needs-translation">No flats available for the time period!</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
