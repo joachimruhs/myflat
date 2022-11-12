@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat" target-language="fr">
+    <header/>
+    <body>
+      <trans-unit id="name.description">
+        <source>name</source>
+        <target state="needs-translation">name</target>
+      </trans-unit>
+      <trans-unit id="address.description">
+        <source>address</source>
+        <target state="needs-translation">address</target>
+      </trans-unit>
+      <trans-unit id="zipcode.description">
+        <source>zipcode</source>
+        <target state="needs-translation">zipcode</target>
+      </trans-unit>
+      <trans-unit id="city.description">
+        <source>city</source>
+        <target state="needs-translation">city</target>
+      </trans-unit>
+      <trans-unit id="country.description">
+        <source>country</source>
+        <target state="needs-translation">country</target>
+      </trans-unit>
+      <trans-unit id="capacity.description">
+        <source>capacity</source>
+        <target state="needs-translation">capacity</target>
+      </trans-unit>
+      <trans-unit id="lat.description">
+        <source>lat</source>
+        <target state="needs-translation">lat</target>
+      </trans-unit>
+      <trans-unit id="lon.description">
+        <source>lon</source>
+        <target state="needs-translation">lon</target>
+      </trans-unit>
+      <trans-unit id="description.description">
+        <source>description</source>
+        <target state="needs-translation">description</target>
+      </trans-unit>
+      <trans-unit id="images.description">
+        <source>images</source>
+        <target state="needs-translation">images</target>
+      </trans-unit>
+      <trans-unit id="category.description">
+        <source>category</source>
+        <target state="needs-translation">category</target>
+      </trans-unit>
+      <trans-unit id="attribute.description">
+        <source>attribute</source>
+        <target state="needs-translation">attribute</target>
+      </trans-unit>
+      <trans-unit id="book.description">
+        <source>book</source>
+        <target state="needs-translation">book</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
