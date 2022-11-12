@@ -3,201 +3,201 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat" target-language="de">
     <header/>
     <body>
-      <trans-unit id="flat">
+      <trans-unit id="flat" approved="yes">
         <source>Flat</source>
-        <target state="needs-translation">Flat</target>
+        <target state="final">Ferienwohnung</target>
       </trans-unit>
-      <trans-unit id="name">
+      <trans-unit id="name" approved="yes">
         <source>Name</source>
-        <target state="needs-translation">Name</target>
+        <target state="final">Name</target>
       </trans-unit>
-      <trans-unit id="address">
+      <trans-unit id="address" approved="yes">
         <source>Address</source>
-        <target state="needs-translation">Address</target>
+        <target state="final">Adresse</target>
       </trans-unit>
-      <trans-unit id="zipcode">
+      <trans-unit id="zipcode" approved="yes">
         <source>Zipcode</source>
-        <target state="needs-translation">Zipcode</target>
+        <target state="final">Plz</target>
       </trans-unit>
-      <trans-unit id="city">
+      <trans-unit id="city" approved="yes">
         <source>City</source>
-        <target state="needs-translation">City</target>
+        <target state="final">Stadt</target>
       </trans-unit>
-      <trans-unit id="country">
+      <trans-unit id="country" approved="yes">
         <source>Country</source>
-        <target state="needs-translation">Country</target>
+        <target state="final">Land</target>
       </trans-unit>
-      <trans-unit id="capacity">
+      <trans-unit id="capacity" approved="yes">
         <source>Capacity</source>
-        <target state="needs-translation">Capacity</target>
+        <target state="final">Kapazität</target>
       </trans-unit>
-      <trans-unit id="lat">
+      <trans-unit id="lat" approved="yes">
         <source>Lat</source>
-        <target state="needs-translation">Lat</target>
+        <target state="final">Breitengrad</target>
       </trans-unit>
-      <trans-unit id="lon">
+      <trans-unit id="lon" approved="yes">
         <source>Lon</source>
-        <target state="needs-translation">Lon</target>
+        <target state="final">Längengrad</target>
       </trans-unit>
-      <trans-unit id="description">
+      <trans-unit id="description" approved="yes">
         <source>Description</source>
-        <target state="needs-translation">Description</target>
+        <target state="final">Beschreibung</target>
       </trans-unit>
-      <trans-unit id="images">
+      <trans-unit id="images" approved="yes">
         <source>Images</source>
-        <target state="needs-translation">Images</target>
+        <target state="final">Bilder</target>
       </trans-unit>
-      <trans-unit id="category">
+      <trans-unit id="category" approved="yes">
         <source>Category</source>
-        <target state="needs-translation">Category</target>
+        <target state="final">Kategorie</target>
       </trans-unit>
-      <trans-unit id="attribute">
+      <trans-unit id="attribute" approved="yes">
         <source>Attribute</source>
-        <target state="needs-translation">Attribute</target>
+        <target state="final">Eigenschaften</target>
       </trans-unit>
-      <trans-unit id="book">
+      <trans-unit id="book" approved="yes">
         <source>Book</source>
-        <target state="needs-translation">Book</target>
+        <target state="final">Buchung</target>
       </trans-unit>
-      <trans-unit id="category">
+      <trans-unit id="category" approved="yes">
         <source>Category</source>
-        <target state="needs-translation">Category</target>
+        <target state="final">Kategorie</target>
       </trans-unit>
-      <trans-unit id="name">
+      <trans-unit id="name" approved="yes">
         <source>Name</source>
-        <target state="needs-translation">Name</target>
+        <target state="final">Name</target>
       </trans-unit>
-      <trans-unit id="attribute">
+      <trans-unit id="attribute" approved="yes">
         <source>Attribute</source>
-        <target state="needs-translation">Attribute</target>
+        <target state="final">Eigenschaften</target>
       </trans-unit>
-      <trans-unit id="name">
+      <trans-unit id="name" approved="yes">
         <source>Name</source>
-        <target state="needs-translation">Name</target>
+        <target state="final">Name</target>
       </trans-unit>
-      <trans-unit id="icon">
+      <trans-unit id="icon" approved="yes">
         <source>Icon</source>
-        <target state="needs-translation">Icon</target>
+        <target state="final">Icon</target>
       </trans-unit>
-      <trans-unit id="book">
+      <trans-unit id="book" approved="yes">
         <source>Book</source>
-        <target state="needs-translation">Book</target>
+        <target state="final">Buchung</target>
       </trans-unit>
-      <trans-unit id="arrival">
+      <trans-unit id="arrival" approved="yes">
         <source>Arrival</source>
-        <target state="needs-translation">Arrival</target>
+        <target state="final">Anreise</target>
       </trans-unit>
-      <trans-unit id="departure">
+      <trans-unit id="departure" approved="yes">
         <source>Departure</source>
-        <target state="needs-translation">Departure</target>
+        <target state="final">Abreise</target>
       </trans-unit>
-      <trans-unit id="feuseruid">
+      <trans-unit id="feuseruid" approved="yes">
         <source>Feuseruid</source>
-        <target state="needs-translation">Feuseruid</target>
+        <target state="final">Fe Useruid</target>
       </trans-unit>
-      <trans-unit id="january">
+      <trans-unit id="january" approved="yes">
         <source>January</source>
-        <target state="needs-translation">January</target>
+        <target state="final">Januar</target>
       </trans-unit>
-      <trans-unit id="februar">
+      <trans-unit id="februar" approved="yes">
         <source>Februar</source>
-        <target state="needs-translation">Februar</target>
+        <target state="final">Februar</target>
       </trans-unit>
-      <trans-unit id="march">
+      <trans-unit id="march" approved="yes">
         <source>March</source>
-        <target state="needs-translation">March</target>
+        <target state="final">März</target>
       </trans-unit>
-      <trans-unit id="april">
+      <trans-unit id="april" approved="yes">
         <source>April</source>
-        <target state="needs-translation">April</target>
+        <target state="final">April</target>
       </trans-unit>
-      <trans-unit id="may">
+      <trans-unit id="may" approved="yes">
         <source>May</source>
-        <target state="needs-translation">May</target>
+        <target state="final">Mai</target>
       </trans-unit>
-      <trans-unit id="june">
+      <trans-unit id="june" approved="yes">
         <source>June</source>
-        <target state="needs-translation">June</target>
+        <target state="final">Juni</target>
       </trans-unit>
-      <trans-unit id="july">
+      <trans-unit id="july" approved="yes">
         <source>July</source>
-        <target state="needs-translation">July</target>
+        <target state="final">Juli</target>
       </trans-unit>
-      <trans-unit id="august">
+      <trans-unit id="august" approved="yes">
         <source>August</source>
-        <target state="needs-translation">August</target>
+        <target state="final">August</target>
       </trans-unit>
-      <trans-unit id="september">
+      <trans-unit id="september" approved="yes">
         <source>September</source>
-        <target state="needs-translation">September</target>
+        <target state="final">September</target>
       </trans-unit>
-      <trans-unit id="october">
+      <trans-unit id="october" approved="yes">
         <source>October</source>
-        <target state="needs-translation">October</target>
+        <target state="final">Oktober</target>
       </trans-unit>
-      <trans-unit id="november">
+      <trans-unit id="november" approved="yes">
         <source>November</source>
-        <target state="needs-translation">November</target>
+        <target state="final">November</target>
       </trans-unit>
-      <trans-unit id="december">
+      <trans-unit id="december" approved="yes">
         <source>December</source>
-        <target state="needs-translation">December</target>
+        <target state="final">Dezember</target>
       </trans-unit>
-      <trans-unit id="mo">
+      <trans-unit id="mo" approved="yes">
         <source>Mo</source>
-        <target state="needs-translation">Mo</target>
+        <target state="final">Mo</target>
       </trans-unit>
-      <trans-unit id="tu">
+      <trans-unit id="tu" approved="yes">
         <source>Tu</source>
-        <target state="needs-translation">Tu</target>
+        <target state="final">Di</target>
       </trans-unit>
-      <trans-unit id="we">
+      <trans-unit id="we" approved="yes">
         <source>We</source>
-        <target state="needs-translation">We</target>
+        <target state="final">Mi</target>
       </trans-unit>
-      <trans-unit id="th">
+      <trans-unit id="th" approved="yes">
         <source>Th</source>
-        <target state="needs-translation">Th</target>
+        <target state="final">Do</target>
       </trans-unit>
-      <trans-unit id="fr">
+      <trans-unit id="fr" approved="yes">
         <source>Fr</source>
-        <target state="needs-translation">Fr</target>
+        <target state="final">Fr</target>
       </trans-unit>
-      <trans-unit id="sa">
+      <trans-unit id="sa" approved="yes">
         <source>Sa</source>
-        <target state="needs-translation">Sa</target>
+        <target state="final">Sa</target>
       </trans-unit>
-      <trans-unit id="su">
+      <trans-unit id="su" approved="yes">
         <source>Su</source>
-        <target state="needs-translation">Su</target>
+        <target state="final">Sp</target>
       </trans-unit>
-      <trans-unit id="dayNames">
+      <trans-unit id="dayNames" approved="yes">
         <source>["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]</source>
-        <target state="needs-translation">["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]</target>
+        <target state="final">["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]</target>
       </trans-unit>
-      <trans-unit id="dayNamesMin">
+      <trans-unit id="dayNamesMin" approved="yes">
         <source>["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]</source>
-        <target state="needs-translation">["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]</target>
+        <target state="final">["So", '"Mo", "Di", "Mi", "Do", "Fr", "Sa"]</target>
       </trans-unit>
-      <trans-unit id="monthNames">
+      <trans-unit id="monthNames" approved="yes">
         <source>["January", "Februar", "March", "April", "May", "June", "July", "August", "September", "October",  "November", "December"]</source>
-        <target state="needs-translation">["January", "Februar", "March", "April", "May", "June", "July", "August", "September", "October",  "November", "December"]</target>
+        <target state="final">['"Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]</target>
       </trans-unit>
-      <trans-unit id="departureBeforeArrival">
+      <trans-unit id="departureBeforeArrival" approved="yes">
         <source>The departure is before the arrival. Please correct your dates!</source>
-        <target state="needs-translation">The departure is before the arrival. Please correct your dates!</target>
+        <target state="final">Das Abreisedatum liegt vor dem Anreisedatum!</target>
       </trans-unit>
-      <trans-unit id="arrival">
+      <trans-unit id="arrival" approved="yes">
         <source>Arrival</source>
-        <target state="needs-translation">Arrival</target>
+        <target state="final">Anreise</target>
       </trans-unit>
-      <trans-unit id="departure">
+      <trans-unit id="departure" approved="yes">
         <source>Departure</source>
-        <target state="needs-translation">Departure</target>
+        <target state="final">Abreise</target>
       </trans-unit>
-      <trans-unit id="noAvailableFlats">
+      <trans-unit id="noAvailableFlats" approved="yes">
         <source>No flats available for the time period!</source>
-        <target state="needs-translation">No flats available for the time period!</target>
+        <target state="final">Keine Ferienwohnung sind für die angefragten Zeit verfügbar!</target>
       </trans-unit>
     </body>
   </file>
