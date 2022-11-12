@@ -3,101 +3,101 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat" target-language="de">
     <header/>
     <body>
-      <trans-unit id="tx_myflat_domain_model_flat">
+      <trans-unit id="tx_myflat_domain_model_flat" approved="yes">
         <source>Flat</source>
-        <target state="needs-translation">Flat</target>
+        <target state="final">Ferienwohnung</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.name">
+      <trans-unit id="tx_myflat_domain_model_flat.name" approved="yes">
         <source>Name</source>
-        <target state="needs-translation">Name</target>
+        <target state="final">Name</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.address">
+      <trans-unit id="tx_myflat_domain_model_flat.address" approved="yes">
         <source>Address</source>
-        <target state="needs-translation">Address</target>
+        <target state="final">Adresse</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.zipcode">
+      <trans-unit id="tx_myflat_domain_model_flat.zipcode" approved="yes">
         <source>Zipcode</source>
-        <target state="needs-translation">Zipcode</target>
+        <target state="final">Plz</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.city">
+      <trans-unit id="tx_myflat_domain_model_flat.city" approved="yes">
         <source>City</source>
-        <target state="needs-translation">City</target>
+        <target state="final">Stadt</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.country">
+      <trans-unit id="tx_myflat_domain_model_flat.country" approved="yes">
         <source>Country</source>
-        <target state="needs-translation">Country</target>
+        <target state="final">Land</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.capacity">
+      <trans-unit id="tx_myflat_domain_model_flat.capacity" approved="yes">
         <source>Capacity</source>
-        <target state="needs-translation">Capacity</target>
+        <target state="final">Kapazität</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.lat">
+      <trans-unit id="tx_myflat_domain_model_flat.lat" approved="yes">
         <source>Lat</source>
-        <target state="needs-translation">Lat</target>
+        <target state="final">Breitengrad</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.lon">
+      <trans-unit id="tx_myflat_domain_model_flat.lon" approved="yes">
         <source>Lon</source>
-        <target state="needs-translation">Lon</target>
+        <target state="final">Längengrad</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.description">
+      <trans-unit id="tx_myflat_domain_model_flat.description" approved="yes">
         <source>Description</source>
-        <target state="needs-translation">Description</target>
+        <target state="final">Beschreibung</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.images">
+      <trans-unit id="tx_myflat_domain_model_flat.images" approved="yes">
         <source>Images</source>
-        <target state="needs-translation">Images</target>
+        <target state="final">Bilder</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.category">
+      <trans-unit id="tx_myflat_domain_model_flat.category" approved="yes">
         <source>Category</source>
-        <target state="needs-translation">Category</target>
+        <target state="final">Kategorie</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.attribute">
+      <trans-unit id="tx_myflat_domain_model_flat.attribute" approved="yes">
         <source>Attribute</source>
-        <target state="needs-translation">Attribute</target>
+        <target state="final">Eigenschaften</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_flat.book">
+      <trans-unit id="tx_myflat_domain_model_flat.book" approved="yes">
         <source>Book</source>
-        <target state="needs-translation">Book</target>
+        <target state="final">Buchen</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_category">
+      <trans-unit id="tx_myflat_domain_model_category" approved="yes">
         <source>Category</source>
-        <target state="needs-translation">Category</target>
+        <target state="final">Kategorie</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_category.name">
+      <trans-unit id="tx_myflat_domain_model_category.name" approved="yes">
         <source>Name</source>
-        <target state="needs-translation">Name</target>
+        <target state="final">Name</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_attribute">
+      <trans-unit id="tx_myflat_domain_model_attribute" approved="yes">
         <source>Attribute</source>
-        <target state="needs-translation">Attribute</target>
+        <target state="final">Eigenschaften</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_attribute.name">
+      <trans-unit id="tx_myflat_domain_model_attribute.name" approved="yes">
         <source>Name</source>
-        <target state="needs-translation">Name</target>
+        <target state="final">Name</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_attribute.icon">
+      <trans-unit id="tx_myflat_domain_model_attribute.icon" approved="yes">
         <source>Icon</source>
-        <target state="needs-translation">Icon</target>
+        <target state="final">Icon</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_book">
+      <trans-unit id="tx_myflat_domain_model_book" approved="yes">
         <source>Book</source>
-        <target state="needs-translation">Book</target>
+        <target state="final">Buchen</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_book.arrival">
+      <trans-unit id="tx_myflat_domain_model_book.arrival" approved="yes">
         <source>Arrival</source>
-        <target state="needs-translation">Arrival</target>
+        <target state="final">Anreise</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_book.departure">
+      <trans-unit id="tx_myflat_domain_model_book.departure" approved="yes">
         <source>Departure</source>
-        <target state="needs-translation">Departure</target>
+        <target state="final">Abreise</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_book.feuseruid">
+      <trans-unit id="tx_myflat_domain_model_book.feuseruid" approved="yes">
         <source>Feuseruid</source>
-        <target state="needs-translation">Feuseruid</target>
+        <target state="final">Fe User Uid</target>
       </trans-unit>
-      <trans-unit id="tx_myflat_domain_model_book.notes">
+      <trans-unit id="tx_myflat_domain_model_book.notes" approved="yes">
         <source>Notes</source>
-        <target state="needs-translation">Notes</target>
+        <target state="final">Notiz</target>
       </trans-unit>
     </body>
   </file>
