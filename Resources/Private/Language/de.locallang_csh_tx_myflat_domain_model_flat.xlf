@@ -3,57 +3,57 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat" target-language="de">
     <header/>
     <body>
-      <trans-unit id="name.description">
+      <trans-unit id="name.description" approved="yes">
         <source>name</source>
-        <target state="needs-translation">name</target>
+        <target state="final">Name</target>
       </trans-unit>
-      <trans-unit id="address.description">
+      <trans-unit id="address.description" approved="yes">
         <source>address</source>
-        <target state="needs-translation">address</target>
+        <target state="final">Adresse</target>
       </trans-unit>
-      <trans-unit id="zipcode.description">
+      <trans-unit id="zipcode.description" approved="yes">
         <source>zipcode</source>
-        <target state="needs-translation">zipcode</target>
+        <target state="final">Plz</target>
       </trans-unit>
-      <trans-unit id="city.description">
+      <trans-unit id="city.description" approved="yes">
         <source>city</source>
-        <target state="needs-translation">city</target>
+        <target state="final">Stadt</target>
       </trans-unit>
-      <trans-unit id="country.description">
+      <trans-unit id="country.description" approved="yes">
         <source>country</source>
-        <target state="needs-translation">country</target>
+        <target state="final">Land</target>
       </trans-unit>
-      <trans-unit id="capacity.description">
+      <trans-unit id="capacity.description" approved="yes">
         <source>capacity</source>
-        <target state="needs-translation">capacity</target>
+        <target state="final">Kapazität</target>
       </trans-unit>
-      <trans-unit id="lat.description">
+      <trans-unit id="lat.description" approved="yes">
         <source>lat</source>
-        <target state="needs-translation">lat</target>
+        <target state="final">Breitengrad</target>
       </trans-unit>
-      <trans-unit id="lon.description">
+      <trans-unit id="lon.description" approved="yes">
         <source>lon</source>
-        <target state="needs-translation">lon</target>
+        <target state="final">Längengrad</target>
       </trans-unit>
-      <trans-unit id="description.description">
+      <trans-unit id="description.description" approved="yes">
         <source>description</source>
-        <target state="needs-translation">description</target>
+        <target state="final">Beschreibung</target>
       </trans-unit>
-      <trans-unit id="images.description">
+      <trans-unit id="images.description" approved="yes">
         <source>images</source>
-        <target state="needs-translation">images</target>
+        <target state="final">Bilder</target>
       </trans-unit>
-      <trans-unit id="category.description">
+      <trans-unit id="category.description" approved="yes">
         <source>category</source>
-        <target state="needs-translation">category</target>
+        <target state="final">Kategorie</target>
       </trans-unit>
-      <trans-unit id="attribute.description">
+      <trans-unit id="attribute.description" approved="yes">
         <source>attribute</source>
-        <target state="needs-translation">attribute</target>
+        <target state="final">Eigenschaften</target>
       </trans-unit>
-      <trans-unit id="book.description">
+      <trans-unit id="book.description" approved="yes">
         <source>book</source>
-        <target state="needs-translation">book</target>
+        <target state="final">Buchen</target>
       </trans-unit>
     </body>
   </file>
