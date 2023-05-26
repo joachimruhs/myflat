@@ -159,7 +159,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 		$this->view->assign('arrival', $this->_GP['arrival']);		
 		$this->view->assign('departure', $this->_GP['departure']);		
-		$this->view->assign('flats', $availableFlats);
+		$this->view->assign('flats', $availableFlats ?? []);
         return $this->responseFactory->createResponse()
             ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
             ->withBody($this->streamFactory->createStream($this->view->render()));
