@@ -69,11 +69,6 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
         if (!$year)
 		$theYear = date('Y', time());
 
-        // leap year calculating....
-        if ( date("L", mktime(0,0,0,1,1,$theYear)) == 1) {
-            $lengthOfMonth[2] = 29;
-        }
-
 //		$out = $theYear;
 
 		$conf['calendarColumns'] = 2;
@@ -95,6 +90,12 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
 			for ($myYear = $year; $myYear < $year + $numberOfYears; $myYear++) {
 				if ($myYear > $year) $firstMonth = 1;
 				$theYear = $myYear;
+
+                // leap year calculating....
+                if ( date("L", mktime(0,0,0,1,1,$myYear)) == 1) {
+                    $lengthOfMonth[2] = 29;
+                }
+
 			// month loop
             for ($m = $firstMonth; $m < 13; $m++) {
 			$out .= '<table class="monthMultiRow">';
