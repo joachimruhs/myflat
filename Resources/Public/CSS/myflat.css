@@ -106,12 +106,12 @@
 
 .tx-myflat .tableMultiRow td.bookingStart {
 	background-color: #fff;
-	background-image:url("/typo3conf/ext/myflat/Resources/Public/Icons/bookingStartRed.gif");
+	background-image:url("/fileadmin/ext/myflat/Resources/Public/Icons/bookingStartRed.gif");
 	background-repeat: no-repeat;
 }	
 .tx-myflat .tableMultiRow td.bookingEnd {
 	background-color: #fff;
-	background-image:url("/typo3conf/ext/myflat/Resources/Public/Icons/bookingEndRed.gif");
+	background-image:url("/fileadmin/ext/myflat/Resources/Public/Icons/bookingEndRed.gif");
 	background-repeat: no-repeat;
 }	
 .tx-myflat .tableMultiRow td.bookingStartAndEnd {

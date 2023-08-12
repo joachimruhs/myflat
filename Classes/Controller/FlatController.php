@@ -5,6 +5,9 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Http\ForwardResponse;
 
+use TYPO3\CMS\Core\Core\Environment;
+use Symfony\Component\Filesystem\Filesystem;
+
 /**
  * This file is part of the "myflat" Extension for TYPO3 CMS.
  *
@@ -174,6 +177,20 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * @return void
 	 */
 	public function multirowcalendarAction() {
+		$iconPath = 'fileadmin/ext/myflat/Resources/Public/MapIcons/';
+
+   		if (!is_dir(Environment::getPublicPath() . '/' . $iconPath)) {
+            $fileSystem = new FileSystem();
+            if (Environment::getPublicPath() != Environment::getProjectPath()) {
+                //  we are in composerMode
+    			$sourceDir = Environment::getProjectPath() . '/vendor/wsr/myflat/Resources/Public/';
+            } else {
+                $sourceDir = 'typo3conf/ext/myflat/Resources/Public/';
+            }
+            $fileSystem->mirror($sourceDir, 'fileadmin/ext/myflat/Resources/Public/');
+			$this->addFlashMessage('Directory ' . $iconPath . ' created for use with own icons!', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::INFO);
+        }
+
 		$this->_GP = $this->request->getArguments();
 
 		// this is used when called by flat list
