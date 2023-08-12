@@ -177,7 +177,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * @return void
 	 */
 	public function multirowcalendarAction() {
-		$iconPath = 'fileadmin/ext/myflat/Resources/Public/MapIcons/';
+		$iconPath = 'fileadmin/ext/myflat/Resources/Public/Icons/';
 
    		if (!is_dir(Environment::getPublicPath() . '/' . $iconPath)) {
             $fileSystem = new FileSystem();
