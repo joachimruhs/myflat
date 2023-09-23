@@ -157,6 +157,9 @@
 				<source>No flats available for the time period!</source>
 			</trans-unit>
 
+			<trans-unit id="noArrivalOrDepartureDate">
+				<source>No arrival or departure date given!</source>
+			</trans-unit>
 
 		</body>
 	</file>

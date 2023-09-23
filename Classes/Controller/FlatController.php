@@ -127,8 +127,15 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function availabilitycheckAction() {
 		$this->_GP = $this->request->getArguments();
-		if (!$this->_GP['arrival'] || !$this->_GP['departure']) return;
-
+		if (!$this->_GP['arrival'] || !$this->_GP['departure']) {
+			$this->flashMessage('Extension: myflat',
+				\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('noArrivalOrDepartureDate', 'myflat'),
+				\TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR);
+			return (new ForwardResponse('availabilityform'))
+                ->withControllerName('Flat')
+                ->withExtensionName('Myflat')
+                ->withArguments($this->request->getArguments());
+        }
 		list($day, $month, $year) = explode('.', $this->_GP['arrival']);
 		$arrival = mktime(0,0,0,$month, $day, $year);
 		list($day, $month, $year) = explode('.', $this->_GP['departure']);
@@ -140,8 +147,10 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 				\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('departureBeforeArrival', 'myflat'),
 				\TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR);
 //			$this->forward("availabilityform", NULL, NULL, $this->request->getArguments());
-			return;
-			//forward  ($actionName, $controllerName = null, $extensionName = null, array  $arguments = null)  
+			return (new ForwardResponse('availabilityform'))
+                ->withControllerName('FlatController')
+                ->withExtensionName('Myflat')
+                ->withArguments($this->request->getArguments());
 
 		}
 
