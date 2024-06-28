@@ -1,0 +1,80 @@
+
+plugin.tx_myflat {
+	view {
+		templateRootPaths {
+			0 = EXT:myflat/Resources/Private/Templates/
+			1 = {$plugin.tx_myflat.view.templateRootPath}
+		}
+
+		partialRootPaths {
+			0 = EXT:myflat/Resources/Private/Partials/
+			1 = {$plugin.tx_myflat.view.partialRootPath}
+		}
+
+		layoutRootPaths {
+			0 = EXT:myflat/Resources/Private/Layouts/
+			1 = {$plugin.tx_myflat.view.layoutRootPath}
+		}
+	}
+
+	persistence {
+		storagePid = {$plugin.tx_myflat.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+
+
+	settings {
+		resultPageId = {$plugin.tx_myflat.settings.resultPageId}
+		displayOnlyPresentAndFutureMonths = {$plugin.tx_myflat.settings.displayOnlyPresentAndFutureMonths}
+	}
+
+
+}
+
+plugin.tx_myflat._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-myflat table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-myflat table th {
+		font-weight:bold;
+	}
+
+	.tx-myflat table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)
+
+page.includeCSS.tx_myflat = {$plugin.tx_myflat.view.cssFile}
+
+page.includeJS {
+  myflat10.forceOnTop = 1
+  myflat10.if.isTrue = {$plugin.tx_myflat.view.includejQueryCore}
+  myflat10 = {$plugin.tx_myflat.view.jQueryFile}
+  myflat10.insertData = 1
+}
+
+page.includeJSFooterlibs.myflat_js1 = {$plugin.tx_myflat.view.javascriptFile}

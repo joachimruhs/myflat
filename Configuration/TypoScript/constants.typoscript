@@ -1,0 +1,41 @@
+
+plugin.tx_myflat {
+	view {
+		# cat=plugin.tx_myflat/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:myflat/Resources/Private/Templates/
+		# cat=plugin.tx_myflat/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:myflat/Resources/Private/Partials/
+		# cat=plugin.tx_myflat/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:myflat/Resources/Private/Layouts/
+
+		# customsubcategory=css=CSS
+		# cat=plugin.tx_myflat/css; type=string; label=CSS file
+		cssFile = EXT:myflat/Resources/Public/CSS/myflat.css
+
+		# customsubcategory=javascript=Javascript
+		# cat=plugin.tx_myflat/javascript; type=boolean; label=Include jQuery core: Add jQuery core script. Turn it off (0), if jQuery is already added.
+		includejQueryCore = 0
+
+		# cat=plugin.tx_myflat/javascript; type=string; label=jQuery library
+		jQueryFile = EXT:myflat/Resources/Public/JavaScript/jquery-3.3.1.min.js
+
+		# cat=plugin.tx_myflat/javascript; type=string; label=Javascript file
+		javascriptFile = EXT:myflat/Resources/Public/JavaScript/myflat.js
+	}
+
+	persistence {
+		# cat=plugin.tx_myflat//a; type=string; label=Default storage PID
+		storagePid =
+	}
+
+	settings {
+
+		# cat=plugin.tx_myflat/pageUid; type=int; label=Result page ID: Result page ID
+		resultPageId = 
+
+		# cat=plugin.tx_myflat/displayOnlyPresentAndFutureMonths; type=boolean; label=displayOnlyPresentAndFutureMonths: Show only current and future months in calendar
+		displayOnlyPresentAndFutureMonths = 
+
+	}
+
+}
