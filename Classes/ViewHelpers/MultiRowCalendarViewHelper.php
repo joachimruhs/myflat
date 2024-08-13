@@ -45,7 +45,9 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
 		} else {
 			$endOfYear = mktime(0, 0, 0, 12, 31, $year);
 		}			
-	
+
+        $arrivals = [];
+        $departures = [];	
 		for ($i = 0; $i < count($bookings); $i++) {
 			
 			$arrival = $bookings->toArray()[$i]->getArrival()->getTimestamp();
