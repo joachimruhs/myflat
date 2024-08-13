@@ -176,7 +176,7 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 				)
 			),
 */
-			$queryBuilder->expr()->andX(
+			$queryBuilder->expr()->and(
 	            $queryBuilder->expr()->gte('capacity',
 	                  $queryBuilder->createNamedParameter($capacity, \PDO::PARAM_INT)
 				)

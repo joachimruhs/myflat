@@ -214,17 +214,15 @@ return array(
 
 
 		),
-        'images' => array(
+        'images' => [
                 'exclude' => 1,
                 'label' => 'Images',
-                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('images', array(
-                        'appearance' => array(
-                                'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference'
-                        ),
-                        'minitems' => 0,
-                        'maxitems' => 10,
-                ), $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']),
-        ),
+    			'config' => [
+                    'type' => 'file',
+                    'allowed' => 'jpg,png,gif',
+                    'maxItems' => 10,
+                ]
+        ],
 		
 		'category' => array(
 			'exclude' => 1,

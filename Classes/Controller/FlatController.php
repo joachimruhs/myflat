@@ -111,7 +111,12 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * @return void
 	 */
 	public function availabilityformAction() {
-	    $this->_GP = \TYPO3\CMS\Core\Utility\GeneralUtility::_POST();
+//	    $this->_GP = \TYPO3\CMS\Core\Utility\GeneralUtility::_POST();
+//krexx($this->_GP);
+
+//        $this->_GP = $request->getParsedBody();
+//krexx($this->_GP);
+        
 	    $this->view->assign('_GP', $this->_GP['tx_myflat_availabilitycheck'] = $this->_GP['tx_myflat_availabilitycheck'] ?? '');
         return $this->responseFactory->createResponse()
             ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
@@ -130,7 +135,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		if (!$this->_GP['arrival'] || !$this->_GP['departure']) {
 			$this->flashMessage('Extension: myflat',
 				\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('noArrivalOrDepartureDate', 'myflat'),
-				\TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR);
+				\TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::ERROR);
 			return (new ForwardResponse('availabilityform'))
                 ->withControllerName('Flat')
                 ->withExtensionName('Myflat')
@@ -145,7 +150,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		if (($arrival >= $departure)) {
 			$this->flashMessage('Extension: myflat',
 				\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('departureBeforeArrival', 'myflat'),
-				\TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR);
+				\TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::ERROR);
 //			$this->forward("availabilityform", NULL, NULL, $this->request->getArguments());
 			return (new ForwardResponse('availabilityform'))
                 ->withControllerName('FlatController')
@@ -197,7 +202,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
                 $sourceDir = 'typo3conf/ext/myflat/Resources/Public/';
             }
             $fileSystem->mirror($sourceDir, 'fileadmin/ext/myflat/Resources/Public/');
-			$this->addFlashMessage('Directory ' . $iconPath . ' created for use with own icons!', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::INFO);
+			$this->addFlashMessage('Directory ' . $iconPath . ' created for use with own icons!', '', \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::INFO);
         }
 
 		$this->_GP = $this->request->getArguments();
@@ -257,7 +262,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * 
 	 * @return void
 	 */
-	private function flashMessage($title, $message, $severity = \TYPO3\CMS\Core\Messaging\FlashMessage::WARNING) {
+	private function flashMessage($title, $message, $severity = \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::WARNING) {
 		$this->addFlashMessage(
 			$message,
 			$title,

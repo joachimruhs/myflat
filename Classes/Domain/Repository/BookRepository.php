@@ -39,25 +39,25 @@ class BookRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 		$queryBuilder->count('uid')->from('tx_myflat_domain_model_book')
 
-		->where($queryBuilder->expr()->andX(
-				$queryBuilder->expr()->andX(
+		->where($queryBuilder->expr()->and(
+				$queryBuilder->expr()->and(
 					$queryBuilder->expr()->eq('flat', $queryBuilder->createNamedParameter($uid, \PDO::PARAM_INT))
 				),
-				$queryBuilder->expr()->andX(
-					$queryBuilder->expr()->orX(
-						$queryBuilder->expr()->andX(
+				$queryBuilder->expr()->and(
+					$queryBuilder->expr()->or(
+						$queryBuilder->expr()->and(
 							$queryBuilder->expr()->lt('arrival', $queryBuilder->createNamedParameter($arrival, \PDO::PARAM_INT)),
 							$queryBuilder->expr()->gt('departure', $queryBuilder->createNamedParameter($arrival, \PDO::PARAM_INT))
 						),
-						$queryBuilder->expr()->andX(
+						$queryBuilder->expr()->and(
 							$queryBuilder->expr()->lt('arrival', $queryBuilder->createNamedParameter($departure, \PDO::PARAM_INT)),
 							$queryBuilder->expr()->gt('departure', $queryBuilder->createNamedParameter($departure, \PDO::PARAM_INT))
 						),
-						$queryBuilder->expr()->andX(
+						$queryBuilder->expr()->and(
 							$queryBuilder->expr()->gte('arrival', $queryBuilder->createNamedParameter($arrival, \PDO::PARAM_INT)),
 							$queryBuilder->expr()->lte('departure', $queryBuilder->createNamedParameter($departure, \PDO::PARAM_INT))
 						),
-						$queryBuilder->expr()->andX(
+						$queryBuilder->expr()->and(
 							$queryBuilder->expr()->eq('arrival', $queryBuilder->createNamedParameter($arrival, \PDO::PARAM_INT)),
 							$queryBuilder->expr()->eq('departure', $queryBuilder->createNamedParameter($departure, \PDO::PARAM_INT))
 						)

@@ -116,24 +116,24 @@ return array(
 			),
 		),
 
-		'name' => array(
+		'name' => [
 			'exclude' => 1,
 			'label' => 'LLL:EXT:myflat/Resources/Private/Language/locallang_db.xlf:tx_myflat_domain_model_attribute.name',
-			'config' => array(
+			'config' => [
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
-			),
-		),
-		'icon' => array(
+			],
+		],
+		'icon' => [
 			'exclude' => 1,
 			'label' => 'LLL:EXT:myflat/Resources/Private/Language/locallang_db.xlf:tx_myflat_domain_model_attribute.icon',
-			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-				'icon',
-				array('maxitems' => 1),
-				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-			),
-		),
+			'config' => [
+                'type' => 'file',
+                'allowed' => 'jpg,png,gif',
+                'maxItems' => 1,
+            ]
+		],
 		
 	),
 );

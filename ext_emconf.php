@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "myflat".
  *
- * Auto generated 01-11-2022 19:03
+ * Auto generated 08-07-2024 17:03
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = array (
   'title' => 'MyFlat',
   'description' => 'Flat manager, shows bookings of holiday flats in calendars, availability check included.',
   'category' => 'plugin',
-  'version' => '1.1.4',
+  'version' => '1.2.0',
   'state' => 'beta',
   'uploadfolder' => true,
   'clearcacheonload' => false,
@@ -25,8 +25,7 @@ $EM_CONF[$_EXTKEY] = array (
   array (
     'depends' => 
     array (
-      'typo3' => '11.4.0-12.5.99',
-//      'vhs' => '6.0.5',
+      'typo3' => '12.4.0-13.2.99',
     ),
     'conflicts' => 
     array (
