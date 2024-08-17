@@ -143,13 +143,13 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$departure = mktime(0,0,0,$month, $day, $year);
 
 
-		if (($arrival >= $departure)) {
+		if ($arrival >= $departure) {
 			$this->flashMessage('Extension: myflat',
 				\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('departureBeforeArrival', 'myflat'),
 				\TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::ERROR);
 //			$this->forward("availabilityform", NULL, NULL, $this->request->getArguments());
 			return (new ForwardResponse('availabilityform'))
-                ->withControllerName('FlatController')
+                ->withControllerName('Flat')
                 ->withExtensionName('Myflat')
                 ->withArguments($this->request->getArguments());
 
