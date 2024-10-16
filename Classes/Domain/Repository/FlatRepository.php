@@ -3,6 +3,7 @@ namespace WSR\Myflat\Domain\Repository;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+use TYPO3\CMS\Core\Database\Connection;
 
 /**
  * This file is part of the "myflat" Extension for TYPO3 CMS.
@@ -85,7 +86,7 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
                 'a.pid',
                 $queryBuilder->createNamedParameter(
                     $arrayOfPids,
-                    \Doctrine\DBAL\Connection::PARAM_INT_ARRAY
+                    Connection::PARAM_INT_ARRAY
                 )
             )
 		);
@@ -101,7 +102,7 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 			)
 		);
 */		
-        $result = $queryBuilder->execute()->fetchAll();
+        $result = $queryBuilder->executeQuery()->fetchAllAssociative();
         return $result;
 	}
 
@@ -113,13 +114,14 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		$query->getQuerySettings()->setRespectSysLanguage(FALSE);
 		$query->getQuerySettings()->setIgnoreEnableFields(!$respectEnableFields);
  
-
+/*
 		$language = $_GET['L'] ?? 0;
 		if($language) {
 		  $query->getQuerySettings()->setLanguageUid(intval($language));
 		}
 		else $query->getQuerySettings()->setLanguageUid(0);
-
+*/
+        
 /*
 		$query->matching(
 			$query->logicalAND(
@@ -161,7 +163,7 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
                 'a.pid',
                 $queryBuilder->createNamedParameter(
                     $arrayOfPids,
-                    \Doctrine\DBAL\Connection::PARAM_INT_ARRAY
+                    Connection::PARAM_INT_ARRAY
                 )
             )
 		);
@@ -178,11 +180,11 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 */
 			$queryBuilder->expr()->and(
 	            $queryBuilder->expr()->gte('capacity',
-	                  $queryBuilder->createNamedParameter($capacity, \PDO::PARAM_INT)
+	                  $queryBuilder->createNamedParameter($capacity, Connection::PARAM_INT)
 				)
 			)
 		);
-        $result = $queryBuilder->execute()->fetchAll();
+        $result = $queryBuilder->executeQuery()->fetchAllAssociative();
         return $result;
 	}
 	

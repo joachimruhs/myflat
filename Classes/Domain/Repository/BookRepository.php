@@ -8,6 +8,7 @@ use TYPO3\CMS\Extbase\Persistence\Generic\Query;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 use TYPO3\CMS\Core\Database\Query\Restriction\HiddenRestriction;
+use TYPO3\CMS\Core\Database\Connection;
 
 /**
  * This file is part of the "myflat" Extension for TYPO3 CMS.
@@ -41,31 +42,31 @@ class BookRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 		->where($queryBuilder->expr()->and(
 				$queryBuilder->expr()->and(
-					$queryBuilder->expr()->eq('flat', $queryBuilder->createNamedParameter($uid, \PDO::PARAM_INT))
+					$queryBuilder->expr()->eq('flat', $queryBuilder->createNamedParameter($uid, Connection::PARAM_INT))
 				),
 				$queryBuilder->expr()->and(
 					$queryBuilder->expr()->or(
 						$queryBuilder->expr()->and(
-							$queryBuilder->expr()->lt('arrival', $queryBuilder->createNamedParameter($arrival, \PDO::PARAM_INT)),
-							$queryBuilder->expr()->gt('departure', $queryBuilder->createNamedParameter($arrival, \PDO::PARAM_INT))
+							$queryBuilder->expr()->lt('arrival', $queryBuilder->createNamedParameter($arrival, Connection::PARAM_INT)),
+							$queryBuilder->expr()->gt('departure', $queryBuilder->createNamedParameter($arrival, Connection::PARAM_INT))
 						),
 						$queryBuilder->expr()->and(
-							$queryBuilder->expr()->lt('arrival', $queryBuilder->createNamedParameter($departure, \PDO::PARAM_INT)),
-							$queryBuilder->expr()->gt('departure', $queryBuilder->createNamedParameter($departure, \PDO::PARAM_INT))
+							$queryBuilder->expr()->lt('arrival', $queryBuilder->createNamedParameter($departure, Connection::PARAM_INT)),
+							$queryBuilder->expr()->gt('departure', $queryBuilder->createNamedParameter($departure, Connection::PARAM_INT))
 						),
 						$queryBuilder->expr()->and(
-							$queryBuilder->expr()->gte('arrival', $queryBuilder->createNamedParameter($arrival, \PDO::PARAM_INT)),
-							$queryBuilder->expr()->lte('departure', $queryBuilder->createNamedParameter($departure, \PDO::PARAM_INT))
+							$queryBuilder->expr()->gte('arrival', $queryBuilder->createNamedParameter($arrival, Connection::PARAM_INT)),
+							$queryBuilder->expr()->lte('departure', $queryBuilder->createNamedParameter($departure, Connection::PARAM_INT))
 						),
 						$queryBuilder->expr()->and(
-							$queryBuilder->expr()->eq('arrival', $queryBuilder->createNamedParameter($arrival, \PDO::PARAM_INT)),
-							$queryBuilder->expr()->eq('departure', $queryBuilder->createNamedParameter($departure, \PDO::PARAM_INT))
+							$queryBuilder->expr()->eq('arrival', $queryBuilder->createNamedParameter($arrival, Connection::PARAM_INT)),
+							$queryBuilder->expr()->eq('departure', $queryBuilder->createNamedParameter($departure, Connection::PARAM_INT))
 						)
 					)
 				)
 			)
 		);
-		$count = $queryBuilder->execute()->fetchOne();
+		$count = $queryBuilder->executeQuery()->fetchOne();
 		
 		if ($count) return FALSE;
 		else return TRUE;
