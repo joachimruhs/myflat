@@ -3,6 +3,15 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-08T18:26:28Z" product-name="myflat">
 		<header/>
 		<body>
+			<trans-unit id="multirowcalendar">
+				<source>MyFlat (multirowcalendar)</source>
+			</trans-unit>
+			<trans-unit id="availabilityform">
+				<source>MyFlat (availabilityform)</source>
+			</trans-unit>
+			<trans-unit id="availabilitycheck">
+				<source>MyFlat (availabilitycheck)</source>
+			</trans-unit>
 			<trans-unit id="flat">
 				<source>Flat</source>
 			</trans-unit>

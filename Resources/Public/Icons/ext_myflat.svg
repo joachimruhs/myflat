@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW SE -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="50px" height="50px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 50 50"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="667" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Arial">
+		<font-face-src>
+			<font-face-name name="Arial"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="F" horiz-adv-x="610" d="M81.9939 0l0 715.991 482.996 0 0 -83.9739 -388.015 0 0 -223.038 336.012 0 0 -83.9739 -336.012 0 0 -325.006 -94.9802 0z"/>
+   <glyph unicode="M" horiz-adv-x="832" d="M75.0058 0l0 715.991 141.975 0 169.345 -506.813c15.665,-47.1698 27.0207,-82.5181 34.1836,-105.986 8.15281,25.9725 20.9644,64.2907 38.3182,114.78l172.315 498.02 126.834 0 0 -715.991 -90.962 0 0 598.998 -209.003 -598.998 -85.3715 0 -206.615 610.005 0 -610.005 -91.0203 0z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Arial";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str0 {stroke:#E32324;stroke-width:2.36228}
+    .str1 {stroke:#62B238;stroke-width:2.36228}
+    .fil1 {fill:none}
+    .fil2 {fill:#2B2A29}
+    .fil0 {fill:#E53924}
+    .fnt0 {font-weight:normal;font-size:20.2825px;font-family:'Arial'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Ebene_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polygon class="fil0 str0" points="39,39 12,39 39,13 "/>
+  <rect class="fil1 str1" x="7" y="8" width="35.671" height="35.1456"/>
+  <text x="10" y="33"  class="fil2 fnt0">FM</text>
+  <polygon class="fil0 str0" points="39,39 12,39 39,13 "/>
+  <rect class="fil1 str1" x="7" y="8" width="35.671" height="35.1456"/>
+  <text x="10" y="33"  class="fil2 fnt0">FM</text>
+ </g>
+</svg>

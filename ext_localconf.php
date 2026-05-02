@@ -1,6 +1,8 @@
 <?php
 defined('TYPO3') or die();
 
+use \TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 	'myflat',
 	'Availabilityform',
@@ -11,8 +13,9 @@ defined('TYPO3') or die();
 	// non-cacheable actions
 	[
 		\WSR\Myflat\Controller\FlatController::class => 'availabilityform, multirowcalendar',
-	]
-);
+	],
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT,
+	);
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 	'myflat',
@@ -24,7 +27,8 @@ defined('TYPO3') or die();
 	// non-cacheable actions
 	[
 		\WSR\Myflat\Controller\FlatController::class => 'availabilitycheck, multirowcalendar',
-	]
+	],
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT,
 );
 
 
@@ -40,5 +44,6 @@ defined('TYPO3') or die();
 	// non-cacheable actions
 	[
 		\WSR\Myflat\Controller\FlatController::class => 'list, show, multirowcalendar',
-	]
+	],
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT,
 );

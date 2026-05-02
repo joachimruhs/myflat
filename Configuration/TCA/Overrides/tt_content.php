@@ -1,10 +1,6 @@
 <?php
 defined('TYPO3') or die();
 
-/*********
- * Plugins
- */
-
 $_EXTKEY = 'myflat';
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
@@ -24,5 +20,3 @@ $_EXTKEY = 'myflat';
 	'Multirowcalendar',
 	'MyFlat (multirow calendar)'
 );
- 
- 

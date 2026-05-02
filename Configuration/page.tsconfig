@@ -1,0 +1,38 @@
+
+mod {
+    wizards.newContentElement.wizardItems.plugins {
+        elements {
+            myflat_multirowcalendar {
+                iconIdentifier = extension-myflat-content-element
+                title = LLL:EXT:myflat/Resources/Private/Language/locallang.xlf:multirowcalendar
+                description = LLL:EXT:myflat/Resources/Private/Language/locallang.xlf:tx_myflat.description
+                tt_content_defValues {
+                    CType = myflat_multirowcalendar
+#                    list_type = myflat_multirowcalendar
+                }
+            },
+
+            myflat_availabilityform {
+                iconIdentifier = extension-myflat-content-element
+                title = LLL:EXT:myflat/Resources/Private/Language/locallang.xlf:availabilityform
+                description = LLL:EXT:myflat/Resources/Private/Language/locallang.xlf:tx_myflat.description
+                tt_content_defValues {
+                    CType = myflat_availabilityform
+#                    list_type = myflat_availabilityform
+                }
+            },
+
+            myflat_availabilitycheck {
+                iconIdentifier = extension-myflat-content-element
+                title = LLL:EXT:myflat/Resources/Private/Language/locallang.xlf:availabilitycheck
+                description = LLL:EXT:myflat/Resources/Private/Language/locallang.xlf:tx_myflat.description
+                tt_content_defValues {
+                    CType = myflat_availabilitycheck
+#                    list_type = myflat_availabilitycheck
+                }
+            },
+
+        }
+        show = *
+    }
+}

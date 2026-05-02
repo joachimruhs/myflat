@@ -17,7 +17,7 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
 	/**
 	* Arguments Initialization
 	*/
-	public function initializeArguments() {
+	public function initializeArguments(): void {
 		$this->registerArgument('year', 'int', 'The year', TRUE);
 		$this->registerArgument('bookings', 'mixed', 'The booking date', TRUE);
 		$this->registerArgument('settings', 'mixed', 'The settings', TRUE);
@@ -31,13 +31,13 @@ class MultiRowCalendarViewHelper extends AbstractViewHelper {
     * @param RenderingContextInterface $renderingContext
     * @return string
     */
-    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
+    public function render()
     {
-		$year = (int) $arguments['year'];
+		$year = (int) $this->arguments['year'];
 		$theYear = $year;
         
-		$bookings = $arguments['bookings'];
-		$settings = $arguments['settings'];
+		$bookings = $this->arguments['bookings'];
+		$settings = $this->arguments['settings'];
 		
 		$startOfYear = mktime(0, 0, 0, 1, 1, $year);
         if ($settings['displayOnlyPresentAndFutureMonths']) {
