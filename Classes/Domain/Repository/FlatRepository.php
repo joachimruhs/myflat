@@ -65,14 +65,14 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		
 
 	/**
-	 * Find all flats in storagePid with $language
-	 *
-	 * @param int uid not used !!!
-	 * @param int  $storagePid
-	 * @param int  $language
-	 * 
-	 * @return array flats
-	 */  
+	* Find all flats in storagePid with $language
+	*
+	* @param int $uid not used !!!
+	* @param int $storagePid
+	* @param int $language
+	*
+	* @return array
+	*/	 
 	public function findByUidAndLang($uid, $storagePid, $languageUid) {
         $queryBuilder = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)
             ->getQueryBuilderForTable('tx_myflat_domain_model_flat');
@@ -140,16 +140,15 @@ class FlatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		return $query->execute()->getFirst();
 	}	
 	
-	
 	/**
-	 * Find all flats in storagePid with capacity larger and eval $capacity
-	 *
-	 * @param int capacity
-	 * @param int  $storagePid
-	 * @param int  $language
-	 * 
-	 * @return array flats
-	 */  
+	* Find all flats in storagePid with capacity larger and eval $capacity
+	*
+	* @param int $capacity
+	* @param int $storagePid
+	* @param int $language
+	*
+	* @return array
+	*/
 	public function findAllOverwrite($capacity, $storagePid, $languageUid) {
         $queryBuilder = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)
            ->getQueryBuilderForTable('tx_myflat_domain_model_flat');

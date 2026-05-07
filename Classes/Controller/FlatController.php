@@ -63,13 +63,13 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 
 	/**
-	 * action list
-	 * 
-     * @param int uid not used anymore !!!
-     * @param int storagePid
-     * 
-	 * @return void
-	 */
+	* action list
+	*
+	* @param int $uid not used anymore !!!
+	* @param int $storagePid
+	*
+	* @return void
+	*/
 	public function listAction() {
 		$this->_GP = $this->request->getArguments();
 
@@ -250,14 +250,14 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	}
 
 	/**
-	 * Flash a message
-	 *
-	 * @param string title 
-	 * @param string message
-	 * @param string $severity
-	 * 
-	 * @return void
-	 */
+	* Flash a message
+	*
+	* @param string $title
+	* @param string $message
+	* @param string $severity
+	*
+	* @return void
+	*/
 	private function flashMessage($title, $message, $severity = \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::WARNING) {
 		$this->addFlashMessage(
 			$message,
