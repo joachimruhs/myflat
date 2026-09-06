@@ -32,7 +32,7 @@ On page Availability Result insert the plugin AvailibilityCheck.
 
 On page Calendar insert the plugin multirowcalendar of the extension.
 
-On page Myflat or on your root page insert Typoscript Include static (from extension) myflat.
+You can now insert a Set WSR myflat and set the desired settings or on page Myflat or on your root page insert Typoscript Include static (from extension) myflat.
 With the constant editor insert the desired settings of the extension like include 
 jQuery options, path to templates etc.
 

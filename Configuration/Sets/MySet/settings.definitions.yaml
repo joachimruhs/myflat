@@ -1,0 +1,80 @@
+categories:
+  MySet:
+    label: 'Myflat'
+  MySet.templates:
+    label: 'Templates'
+    parent: MySet
+  MySet.layout:
+    label: 'Layout'
+    parent: MySet
+  MySet.pages:
+    label: 'Pages'
+    parent: MySet
+  MySet.options:
+    label: 'Options'
+    parent: MySet
+
+settings:
+#  plugin.tx_myflat.view.templateRootPath:
+  plugin.tx_myflat.view.templateRootPath:
+    label: 'Page template path'
+    category: MySet.templates
+    description: 'Path to templates root'
+    type: string
+    default: 'EXT:myflat/Resources/Private/Templates/'
+
+#  MySet.partialRootPath:
+  plugin.tx_myflat.view.partialRootPath:
+    label: 'Partials'
+    category: MySet.templates
+    description: 'Path to partial root'
+    type: string
+    default: 'EXT:myflat/Resources/Private/Partials/'
+#  MySet.layoutRootPath:
+  plugin.tx_myflat.view.layoutRootPath:
+    label: 'Layouts'
+    category: MySet.templates
+    description: 'Path to layout root'
+    type: string
+    default: 'EXT:myflat/Resources/Private/Layouts/'
+
+  plugin.tx_myflat.view.includejQueryCore:
+    label: 'IncludejQueryCore'
+    category: MySet.templates
+    description: 'IncludejQueryCore [0|1]'
+    type: bool
+    default: 0
+  plugin.tx_myflat.view.jQueryFile:
+    label: 'jQueryFile'
+    category: MySet.templates
+    description: 'jQuery file'
+    type: string
+    default: 'EXT:myflat/Resources/Public/JavaScript/jquery-3.5.1.min.js'
+  plugin.tx_myflat.view.cssFile:
+    label: 'cssFile'
+    category: MySet.templates
+    description: 'cssFile'
+    type: string
+    default: 'EXT:myflat/Resources/Public/CSS/myflat.css'
+
+#  MySet.storagePid:
+  plugin.tx_myflat.persistence.storagePid:
+    label: 'Default storage PID'
+    category: MySet.pages
+    description: 'Folder that stores all data'
+    type: page
+    default: 0
+  plugin.tx_myflat.settings.resultPageId:
+    label: 'result pageId'
+    category: MySet.options
+    description: 'The page uid of the result'
+    type: int
+    default: 0
+  plugin.tx_myflat.settings.displayOnlyPresentAndFutureMonths:
+    label: 'Show only present and future months'
+    category: MySet.options
+    description: 'Show only present and future months'
+    type: bool
+    default: 0
+  
+
