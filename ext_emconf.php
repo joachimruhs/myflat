@@ -14,13 +14,13 @@ $EM_CONF[$_EXTKEY] = array (
   'title' => 'MyFlat',
   'description' => 'Flat manager, shows bookings of holiday flats in calendars, availability check included.',
   'category' => 'plugin',
-  'version' => '1.5.4',
+  'version' => '1.5.5',
   'state' => 'beta',
   'uploadfolder' => true,
   'clearcacheonload' => false,
   'author' => 'Joachim Ruhs',
   'author_email' => 'postmaster@joachim-ruhs.de',
-  'author_company' => NULL,
+  'author_company' => 'Web Services Ruhs',
   'constraints' => 
   array (
     'depends' => 
