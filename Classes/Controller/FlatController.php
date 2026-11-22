@@ -205,7 +205,7 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 		// this is used when called by flat list
         $this->_GP['year'] = $this->_GP['year'] ?? date('Y', time());
-		
+
 		$flat = $this->flatRepository->findByUid($this->_GP['flatUid']);
 
 		$months = array(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('january', 'myflat'),
