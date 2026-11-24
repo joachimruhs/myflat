@@ -201,11 +201,19 @@ class FlatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 			$this->addFlashMessage('Directory ' . $iconPath . ' created for use with own icons!', '', \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::INFO);
         }
 
-		$this->_GP = $this->request->getArguments();
+	$this->_GP = $this->request->getArguments();
+
+	// Several calendar plugins on one page share the request arguments. If this plugin
+	// has exactly one flat in its storage folder, always show that flat; the selected
+	// year from the request applies to all calendars on the page.
+	$ownFlats = $this->flatRepository->findByUidAndLang(1, $this->conf['storagePid'], $this->languageUid);
+	if (count($ownFlats) === 1) {
+		$this->_GP['flatUid'] = (int)$ownFlats[0]['uid'];
+	}
 
 		// this is used when called by flat list
         $this->_GP['year'] = $this->_GP['year'] ?? date('Y', time());
-
+		
 		$flat = $this->flatRepository->findByUid($this->_GP['flatUid']);
 
 		$months = array(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('january', 'myflat'),

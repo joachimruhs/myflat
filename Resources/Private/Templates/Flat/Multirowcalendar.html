@@ -72,8 +72,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:variable name="cycle" value="{settings.displayOnlyPresentAndFutureMonths}"></f:variable>
 <div class="theMultiRowCalendar">
 	<div class="yearSelector">
-		<f:if condition="{cycle} == 0">
+		<f:if condition="{cycle} == ''">
 		<f:for each="{years}" as="theYear" iteration="iterator">
+
 			<f:if condition="{iterator.cycle} > {cycle}">
 				<f:if condition="{theYear} == {year}">
 					<f:then>
